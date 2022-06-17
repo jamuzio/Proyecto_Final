@@ -1,7 +1,7 @@
-const express = require('express')
-const routerProductos = require('./Routers/routerProductos')
-const routerCarrito = require('./Routers/routerCarrito')
-const { AdminController } = require('./Controllers/AdminController')
+import express from 'express'
+import routerProductos from './Routers/routerProductos.js'
+import routerCarrito from './Routers/routerCarrito.js'
+import { AdminController } from './Controllers/AdminController.js'
 
 const app = express()
 const PORT = 8080

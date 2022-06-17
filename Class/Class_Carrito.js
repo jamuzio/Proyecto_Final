@@ -1,4 +1,4 @@
-const fs = require('fs')
+import fs from 'fs'
 
 const File = './DataBase/DB_ShopCart.json'
 
@@ -128,4 +128,4 @@ class ShopCart_Class {
     }
 }
 
-module.exports = ShopCart_Class
+export default ShopCart_Class

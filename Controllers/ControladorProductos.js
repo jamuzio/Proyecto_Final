@@ -1,4 +1,4 @@
-const Class_Prod = require('../class/Class_Prod.js')
+import Class_Prod  from '../class/Class_Prod.js'
 
 const Productos = new Class_Prod()
 
@@ -116,4 +116,4 @@ const ProdFuncionCtrl = {
     }
 }
 
-module.exports = { ControladorProductos , ProdFuncionCtrl }
+export { ControladorProductos , ProdFuncionCtrl }

@@ -1,5 +1,5 @@
-const ShopCart_Class = require('../class/Class_Carrito.js')
-const { ProdFuncionCtrl } = require('./ControladorProductos.js')
+import ShopCart_Class from '../class/Class_Carrito.js'
+import { ProdFuncionCtrl } from './ControladorProductos.js'
 
 const Carritos = new ShopCart_Class()
 
@@ -90,5 +90,4 @@ const ControladorCarrito = {
 
 }
 
-
-module.exports = { ControladorCarrito }
+export { ControladorCarrito }

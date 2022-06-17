@@ -1,4 +1,4 @@
-const fs = require('fs')
+import fs from 'fs'
 
 const File = './DataBase/DB_Prod.json'
 
@@ -160,4 +160,4 @@ class Product_Class {
 }
 
 
-module.exports = Product_Class
+export default Product_Class

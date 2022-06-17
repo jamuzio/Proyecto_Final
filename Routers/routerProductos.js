@@ -1,6 +1,6 @@
-const { Router } = require('express')
-const { ControladorProductos } = require('../Controllers/ControladorProductos.js')
-const { AdminController } = require('../Controllers/AdminController')
+import { Router } from 'express'
+import { ControladorProductos } from '../Controllers/ControladorProductos.js'
+import { AdminController } from '../Controllers/AdminController.js'
 
 
 
@@ -12,5 +12,4 @@ routerProductos.post('/', AdminController.AdminCheck, ControladorProductos.AddNe
 routerProductos.put('/:id', AdminController.AdminCheck, ControladorProductos.UpdateProd)
 routerProductos.delete('/:id', AdminController.AdminCheck, ControladorProductos.DeleteProdByID)
 
-
-module.exports = routerProductos
+export default routerProductos

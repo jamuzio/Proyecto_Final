@@ -22,4 +22,4 @@ const AdminController = {
 }
 
 
-module.exports = { AdminController }
+export { AdminController }
