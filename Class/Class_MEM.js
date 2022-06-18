@@ -1,31 +1,12 @@
-import fs from 'fs'
 
 
-class Class_FS {
-    constructor (File){
-        this.File = File
+
+class Class_MEM {
+    constructor (){
         this.Objects = []
-        try{
-            let FileData = fs.readFileSync(this.File, 'utf-8')
-            this.Objects = JSON.parse(FileData)
-        }
-        catch(error){
-            if (error.code === 'ENOENT') {  //si es la primera ejecucion y no existe el archivo lo creo
-                try{
-                    fs.writeFileSync(this.File, '[]')
-                    console.log(`Se creo el archivo ${this.File}`)
-                }
-                catch{
-                    console.log(`No se pudo crear el archivo ${this.File}`)
-                    throw error
-                }
-               } else {
-                    console.log(`No se pudo leer el archivo ${this.File}`)
-                    throw error
-               }
-        }
+        
     }
-    async save(datos, type){
+    save(datos, type){
         let hoy = new Date()
         const id = Date.now()
         let NewElement
@@ -59,24 +40,15 @@ class Class_FS {
             throw error
         }
         this.Objects.push(NewElement)
-        let ObjectJSON = JSON.stringify(this.Objects)
-        try{
-            await fs.promises.writeFile(this.File, ObjectJSON)
-            console.log(`Nuevo ${type} creado`)
-            if(type === 'Carrito') {
-                return id
-            }
-            else if( type === 'Producto') {
-                return NewElement
-            }
+        console.log(`Nuevo ${type} creado`)
+        if(type === 'Carrito') {
+            return id
         }
-        catch(error){
-            console.log(`No se pudo crear un nuevo ${type}.`)
-            throw error
+        else if( type === 'Producto') {
+            return NewElement
         }
     }
-    async cleanById(id, type){
-        let BKArry = this.Objects.splice()
+    cleanById(id, type){
         const indiceBuscado = this.Objects.findIndex(p => p.ID == id)
         if(indiceBuscado === -1){
             const error = new Error(`El ${type} con id ${id} no fue encotrado`)
@@ -95,32 +67,14 @@ class Class_FS {
                 error.tipo = 'unknown type'
                 throw error
             }
-            let ObjectJSON = JSON.stringify(this.Objects)
-            try{
-                await fs.promises.writeFile(this.File, ObjectJSON)
-                console.log(`El ${type} se a ${accion} exitosamente!`)
-            }
-            catch(error){
-                console.log(`El ${type} no pudo ser ${accion}`)
-                this.Objects = BKArry
-                throw error
-            }
         }
+        console.log(`El ${type} se a ${accion} exitosamente!`)
     }
-    async getAll(){
-        try{
-            let FileData = await fs.promises.readFile(this.File, 'utf-8')
-            this.Objects = JSON.parse(FileData)
-            return this.Objects
-        }
-        catch(error){
-            console.log('No se pudo leer el archivo. :(')
-            throw error
-        }
+    getAll(){
+        return this.Objects
     }
 
-    async update(id, dato, type){
-        let BKArry = this.Objects.splice()
+    update(id, dato, type){
         let hoy = new Date()
         const indiceBuscado = this.Objects.findIndex(p => p.ID == id)
         if(indiceBuscado === -1){
@@ -157,41 +111,18 @@ class Class_FS {
                 error.tipo = 'unknown type'
                 throw error
             }
-            let ObjectJSON = JSON.stringify(this.Objects)
-            try{
-                await fs.promises.writeFile(this.File, ObjectJSON)
-                console.log(`Se ${accion}`)
-            }
-            catch(error){
-                console.log(`No se pudo ${accion}`)
-                this.Objects = BKArry
-                throw error
-            }
+            console.log(`Se ${accion}`)
         }
     }
-    async getByID(id){
-        try{
-            let FileData = await fs.promises.readFile(this.File, 'utf-8')
-            this.Objects = JSON.parse(FileData)
-            const ElementoBuscado = this.Objects.find(p => p.ID == id)
-            if (!ElementoBuscado) {
-                const error = new Error('No existe el elemento buscado')
-                error.tipo = 'db not found'
-                throw error
-            }
-            return ElementoBuscado
+    getByID(id){
+        const ElementoBuscado = this.Objects.find(p => p.ID == id)
+        if (!ElementoBuscado) {
+            const error = new Error('No existe el elemento buscado')
+            error.tipo = 'db not found'
+            throw error
         }
-        catch(error){
-            if(error.tipo === 'db not found'){
-                throw error
-            } else{
-                console.log('No se pudo leer el archivo. :(')
-                console.log(error)
-                throw error
-            }
-          
-        }
+        return ElementoBuscado
     }
 }
 
-export default Class_FS
+export default Class_MEM

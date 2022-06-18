@@ -1,7 +1,15 @@
-import ContenedorMemoria from "../../contenedores/ContenedorMemoria.js"
+import Class_MEM from "../../Class/Class_MEM.js"
 
-class PersonasDaoMem extends ContenedorMemoria {
-
+class ProductosDaoMem extends Class_MEM {
+    save(datos){
+        return super.save(datos, 'Producto')
+     }
+    deleteById(id){
+        super.cleanById(id, 'Producto')
+     }
+    update(id, datos){
+         super.update(id, datos, 'Producto')
+     }
 }
 
-export default PersonasDaoMem
+export default ProductosDaoMem

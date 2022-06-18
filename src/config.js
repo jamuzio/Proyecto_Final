@@ -14,5 +14,5 @@ export default {
     firebase: {
 
     },
-    MODO_PERSISTENCIA: 'json'
+    MODO_PERSISTENCIA: 'jmemoria'
 }
