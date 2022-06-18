@@ -1,14 +1,19 @@
-import ContenedorMongoDb from "../../contenedores/ContenedorMongoDb.js"
+import Class_Mongo from "../../Class/Class_Mongo.js"
 
-class PersonasDaoMongoDb extends ContenedorMongoDb {
+class ProductosDaoMongoDb extends Class_Mongo {
 
     constructor() {
-        super('personas', {
-            nombre: { type: String, required: true },
-            apellido: { type: Number, required: true },
-            edad: { type: Number, required: true },
-        })
+        super('Productos')
     }
+    async save(datos){
+        return await super.save(datos, 'Producto')
+     }
+     async deleteById(id){
+         await super.cleanById(id, 'Producto')
+     }
+     async update(id, datos){
+         await super.update(id, datos, 'Producto')
+     }
 }
 
-export default PersonasDaoMongoDb
+export default ProductosDaoMongoDb

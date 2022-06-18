@@ -1,14 +1,22 @@
-import ContenedorMongoDb from "../../contenedores/ContenedorMongoDb.js"
+import Class_Mongo from "../../Class/Class_Mongo.js"
 
-class PersonasDaoMongoDb extends ContenedorMongoDb {
+class CarritoDaoMongoDb extends Class_Mongo {
 
     constructor() {
-        super('personas', {
-            nombre: { type: String, required: true },
-            apellido: { type: Number, required: true },
-            edad: { type: Number, required: true },
-        })
+        super('Carritos')
+    }
+    async create(datos){
+       return await super.save(datos, 'Carrito')
+    }
+    async cleanById(id){
+        await super.cleanById(id, 'Carrito')
+    }
+    async AddProd(id, id_prod){
+        await super.update(id, id_prod, 'Carrito')
+    }
+    async removeProd(id, id_prod){
+        await super.update(id, id_prod, 'CarrRmProd')
     }
 }
 
-export default PersonasDaoMongoDb
+export default CarritoDaoMongoDb

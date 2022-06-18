@@ -68,7 +68,7 @@ const ControladorProductos = {
         const id = req.params.id
         try {
             await ProductosDao.deleteById(id);
-            res.status(202).send('Producto Eliminado con exito')
+            res.status(202).json('Producto Eliminado con exito')
         } catch (error) {
             if (error.tipo === 'db not found') {
                 res.status(404).json({ error: error.message })

@@ -3,16 +3,15 @@ export default {
         path: './DataBase'
     },
     mongodb: {
-        cnxStr: '"mongodb+srv://cluster0.l053v.mongodb.net/CoderHouse" --username root',
+        cnxStr: 'mongodb+srv://root:MongoPWDRoot@cluster0.l053v.mongodb.net/CoderHouse?retryWrites=true&w=majority',
         options: {
             useNewUrlParser: true,
             useUnifiedTopology: true,
-            useCreateIndex: true,
-            serverSelectionTimeoutMS: 5000,
+            serverSelectionTimeoutMS: 5000
         }
     },
     firebase: {
 
     },
-    MODO_PERSISTENCIA: 'jmemoria'
+    MODO_PERSISTENCIA: 'mongodb'
 }
