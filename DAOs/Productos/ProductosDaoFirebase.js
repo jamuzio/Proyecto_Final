@@ -1,10 +1,19 @@
-import ContenedorFirebase from "../../contenedores/ContenedorFirebase.js"
+import Class_FireBase from "../../Class/Class_FireBase.js"
 
-class PersonasDaoFirebase extends ContenedorFirebase {
+class ProductosDaoFirebase extends Class_FireBase {
 
     constructor() {
-        super('personas')
+        super('Productos')
     }
+    async save(datos){
+        return await super.save(datos, 'Producto')
+     }
+     async deleteById(id){
+         await super.cleanById(id, 'Producto')
+     }
+     async update(id, datos){
+         await super.update(id, datos, 'Producto')
+     }
 }
 
-export default PersonasDaoFirebase
+export default ProductosDaoFirebase

@@ -13,5 +13,5 @@ export default {
     firebase: {
 
     },
-    MODO_PERSISTENCIA: 'mongodb'
+    MODO_PERSISTENCIA: 'firebase'
 }
