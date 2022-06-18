@@ -1,16 +1,15 @@
-import Class_Prod  from '../class/Class_Prod.js'
+import { ProductosDao } from '../DAOs/Productos/index.js'
 
-const Productos = new Class_Prod()
 
 const ControladorProductos = {
     AllProd: async (req, res) => {
-        let AllProd = await Productos.getAll()
+        let AllProd = await ProductosDao.getAll()
         res.send(AllProd)
     },
     ProdByID: async (req, res) => {
         const id = req.params.id
         try {
-            const ProductoBuscado = await Productos.getById(id);
+            const ProductoBuscado = await ProductosDao.getByID(id);
             res.json(ProductoBuscado)
         } catch (error) {
             if (error.tipo === 'db not found') {
@@ -24,7 +23,7 @@ const ControladorProductos = {
         let NewProduct = req.body
         try {
             if (itValidProd(NewProduct)){
-                   NewProduct =  await Productos.save(NewProduct)
+                   NewProduct =  await ProductosDao.save(NewProduct)
             } else {
                 const error = new Error('El formato no es correcto')
                 error.tipo = 'bad format'
@@ -47,7 +46,7 @@ const ControladorProductos = {
         const UpdateData = req.body
         try {
             if (itValidProd(UpdateData)){
-                    await Productos.UpdateProd(id, UpdateData)
+                    await ProductosDao.update(id, UpdateData)
             } else {
                 const error = new Error('El formato no es correcto')
                 error.tipo = 'bad format'
@@ -68,7 +67,7 @@ const ControladorProductos = {
     DeleteProdByID: async (req, res) => {
         const id = req.params.id
         try {
-            await Productos.deleteById(id);
+            await ProductosDao.deleteById(id);
             res.status(202).send('Producto Eliminado con exito')
         } catch (error) {
             if (error.tipo === 'db not found') {
@@ -108,7 +107,7 @@ function itValidProd(Dato){
 const ProdFuncionCtrl = {
     ProdByID: async (id) => {
         try {
-            const ProductoBuscado = await Productos.getById(id);
+            const ProductoBuscado = await ProductosDao.getByID(id);
             return ProductoBuscado
         } catch (error) {
             throw error
