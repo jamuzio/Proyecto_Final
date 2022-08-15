@@ -1,11 +1,12 @@
-import config from '../../src/config.js'
+
+const PATH = process.env.FS_PATH
 
 let CarritoDao
 
-switch (config.MODO_PERSISTENCIA) {
+switch (process.env.MODO_PERSISTENCIA) {
     case 'json':
         const { default: CarritoDaoFS } = await import('./CarritoDaoFS.js')
-        CarritoDao = new CarritoDaoFS(config.fileSystem.path)
+        CarritoDao = new CarritoDaoFS(PATH)
         break
     case 'firebase':
         const { default: CarritoDaoFirebase } = await import('./CarritoDaoFirebase.js')

@@ -1,3 +1,4 @@
+import './Env/dotenv_config.js'
 import express from 'express'
 import routerProductos from './Routers/routerProductos.js'
 import routerCarrito from './Routers/routerCarrito.js'

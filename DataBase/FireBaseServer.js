@@ -1,7 +1,6 @@
 import admin from "firebase-admin"
-import fs from 'fs'
 
-const serviceAccount = JSON.parse(fs.readFileSync("./src/coderhouse-6f4ab-firebase-adminsdk-mlkug-04ee580073.json", 'utf8'))
+const serviceAccount = JSON.parse(process.env.FIRE_BASE)
 try{
     admin.initializeApp({
         credential: admin.credential.cert(serviceAccount)

@@ -1,4 +1,4 @@
-import crearError from "../Tools/Error_Generator"
+import crearError from "../Tools/Error_Generator.js"
 
 
 class Class_MEM {

@@ -1,11 +1,11 @@
-import config from '../../src/config.js'
 
 let ProductosDao
+const PATH = process.env.FS_PATH
 
-switch (config.MODO_PERSISTENCIA) {
+switch (process.env.MODO_PERSISTENCIA) {
     case 'json':
         const { default: ProductosDaoFS } = await import('./ProductosDaoFS.js')
-        ProductosDao = new ProductosDaoFS(config.fileSystem.path)
+        ProductosDao = new ProductosDaoFS(PATH)
         break
     case 'firebase':
         const { default: ProductosDaoFirebase } = await import('./ProductosDaoFirebase.js')
