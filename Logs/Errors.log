@@ -1,0 +1,11 @@
+[2022-08-14T21:01:56.914] [ERROR] default - NOT_FOUND: Recurso no encontrado
+[2022-08-14T21:05:08.954] [ERROR] default - NOT_FOUND: El elemento con id 165557 no fue encotrado
+[2022-08-14T21:18:33.988] [FATAL] default - ATENCION: A ocurrido un error sin manejo especifico. 
+	 ReferenceError: ProdID is not defined
+    at RemoveProd (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/Controllers/ControladorCarrito.js:58:49)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5) 
+[2022-08-14T21:19:10.600] [ERROR] default - NOT_FOUND: El producto con id 1655571801702 no se encuntra en el carrito
+[2022-08-14T21:20:09.789] [FATAL] default - ATENCION: A ocurrido un error sin manejo especifico. 
+	 ReferenceError: ProdID is not defined
+    at RemoveProd (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/Controllers/ControladorCarrito.js:58:49)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5) 

@@ -1,46 +1,42 @@
 import { CarritoDao } from '../DAOs/Carrito/index.js'
+import logger from '../Tools/logger.js'
 import { ProdFuncionCtrl } from './ControladorProductos.js'
 
 
 const ControladorCarrito = {
-    CleanByID: async (req, res) => {
+    CleanByID: async (req, res, next) => {
         const id = req.params.id
         try {
-            await CarritoDao.cleanById(id);
+            await CarritoDao.cleanById(id)
+            logger.info(`El carrito ${id} se a vaciado con exito`)
             res.status(202).send('El carrito se a vaciado con exito')
         } catch (error) {
-            if (error.tipo === 'db not found') {
-                res.status(404).json({ error: error.message })
-            } else {
-                res.status(500).json({ error: error.message })
-            }
+            next(error)
         }
     },
-    CreateNew: async (req, res) => {
+    CreateNew: async (req, res, next) => {
         try {
             const NewId = await CarritoDao.create()
+            logger.info(`Se a creado un nuevo carrito con id: ${id}`)
             res.status(201).json({NewId})
         } catch (error) {
-            res.status(500).json({ error: error.message })
+            next(error)
             }
     },
-    AddProd: async (req, res) =>{
+    AddProd: async (req, res, next) =>{
         const id = req.params.id
         const ProdID = req.body
         try{
             await ProdFuncionCtrl.ProdByID(ProdID.ID)
             await CarritoDao.AddProd(id, ProdID)
+            logger.info(`Se agrego el producto ${ProdID.ID} al carrito ${id}`)
             res.sendStatus(200)
         }
         catch(error){
-            if (error.tipo === 'db not found') {
-                res.status(404).json({ error: error.message })
-            } else {
-                res.status(500).json({ error: error.message })
-            }
+            next(error)
         }
     },
-    DisplayProd: async (req, res) =>{
+    DisplayProd: async (req, res, next) =>{
         const id = req.params.id
         try{
             const carrito = await CarritoDao.getByID(id)
@@ -51,26 +47,19 @@ const ControladorCarrito = {
             res.status(200).json(ListaProductos)
         }
         catch(error){
-            if (error.tipo === 'db not found') {
-                res.status(404).json({ error: error.message })
-            } else {
-                res.status(500).json({ error: error.message })
-            }
+            next(error)
         }
     },
-    RemoveProd: async (req, res) =>{
+    RemoveProd: async (req, res, next) =>{
         const id = req.params.id
         const id_prod = req.params.id_prod
         try{
             await CarritoDao.removeProd(id, id_prod)
+            logger.info(`Se quitó el producto ${id_prod} al carrito ${id}`)
             res.sendStatus(200)
         }
         catch(error){
-            if (error.tipo === 'db not found') {
-                res.status(404).json({ error: error.message })
-            } else {
-                res.status(500).json({ error: error.message })
-            }
+            next(error)
         }
     }
 

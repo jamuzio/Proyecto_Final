@@ -1,4 +1,5 @@
 import dbCoderhouse from "../DataBase/MongoServer.js"
+import crearError from "../Tools/Error_Generator.js"
 
 
 class Class_Mongo {
@@ -10,77 +11,59 @@ class Class_Mongo {
         const id = Date.now()
         let NewElement
         try{
-        if(type === 'Carrito' ){
-            NewElement = {
-                ID: `${id}`,
-                TIMESTAMP: `${hoy.toDateString() +' '+  hoy.toLocaleTimeString()}`,
-                PRODUCTOS: []
-                }
-        } else if(type === 'Producto'){
-            const Producto = await this.coleccion.find({NOMBRE: `${datos.NOMBRE}`}).toArray()
-            const Codigo = await this.coleccion.find({CODIGO: `${datos.CODIGO}`}).toArray()
-            if (Producto.length === 0 && Codigo.length === 0){
+            if(type === 'Carrito' ){
                 NewElement = {
                     ID: `${id}`,
                     TIMESTAMP: `${hoy.toDateString() +' '+  hoy.toLocaleTimeString()}`,
-                    NOMBRE: datos.NOMBRE,
-                    DESCRIPCION: datos.DESCRIPCION,
-                    CODIGO: datos.CODIGO,
-                    FOTO: datos.FOTO,
-                    PRECIO: datos.PRECIO,
-                    STOCK: datos.STOCK
+                    PRODUCTOS: []
+                    }
+            } else if(type === 'Producto'){
+                const Producto = await this.coleccion.find({NOMBRE: `${datos.NOMBRE}`}).toArray()
+                const Codigo = await this.coleccion.find({CODIGO: `${datos.CODIGO}`}).toArray()
+                if (Producto.length === 0 && Codigo.length === 0){
+                    NewElement = {
+                        ID: `${id}`,
+                        TIMESTAMP: `${hoy.toDateString() +' '+  hoy.toLocaleTimeString()}`,
+                        NOMBRE: datos.NOMBRE,
+                        DESCRIPCION: datos.DESCRIPCION,
+                        CODIGO: datos.CODIGO,
+                        FOTO: datos.FOTO,
+                        PRECIO: datos.PRECIO,
+                        STOCK: datos.STOCK
+                    }
+                } else {
+                    throw crearError('DUPLICATED_PRODUCT')
                 }
             } else {
-                const error = new Error('Producto Duplicado')
-                error.tipo = 'duplicated product'
-                throw error
+                throw crearError('UNKNOWN_TYPE', `Tipo ${type} desconocido`)
             }
-        } else {
-            const error = new Error(`Typo ${type} desconocido `)
-            error.tipo = 'unknown type'
-            throw error
-        }
-        await this.coleccion.insertOne(NewElement)
-        console.log(`Nuevo ${type} creado`)
-        if(type === 'Carrito') {
-            return id
-        }
-        else if( type === 'Producto') {
-            return NewElement
-        }
+            await this.coleccion.insertOne(NewElement)
+            if(type === 'Carrito') {
+                return id
+            }
+            else if( type === 'Producto') {
+                return NewElement
+            }
         }
         catch(error){
-            console.log(`No se pudo crear un nuevo ${type}.`)
             throw error
         }
     }
     async cleanById(id, type){
-        let accion
         let resultado
         try{
             if(type === 'Carrito' ){
-                resultado = await this.coleccion.findOneAndUpdate({ID: `${id}`}, {$set: {PRODUCTOS: []}})
-                accion = 'vaciado'               
+                resultado = await this.coleccion.findOneAndUpdate({ID: `${id}`}, {$set: {PRODUCTOS: []}})            
             } else if(type === 'Producto'){
-                resultado = await this.coleccion.findOneAndDelete({ID: `${id}`})
-                accion = 'borrado'   
+                resultado = await this.coleccion.findOneAndDelete({ID: `${id}`}) 
             } else {
-                const error = new Error(`Typo ${type} desconocido `)
-                error.tipo = 'unknown type'
-                throw error
+                throw crearError('UNKNOWN_TYPE', `Tipo ${type} desconocido`)
             }
             if(!resultado.value){
-                const error = new Error(`El ${type} con id ${id} no fue encotrado`)
-                error.tipo = 'db not found'
-                throw error
-            } else {
-                console.log(`El ${type} se a ${accion} exitosamente!`)
+                throw crearError('NOT_FOUND', `El ${type} con id ${id} no fue encotrado`)
             }
         }
         catch(error){
-            if(error.tipo != 'db not found' && error.tipo != 'unknown type' ){
-                console.log(`El ${type} no pudo ser ${accion}`)
-            }
             throw error
         }
     }
@@ -91,7 +74,6 @@ class Class_Mongo {
             return AllObjects
         }
         catch(error){
-            console.log('No se pudo leer la base')
             throw error
         }
     }
@@ -99,7 +81,7 @@ class Class_Mongo {
     async update(id, dato, type){
         let hoy = new Date()
         let resultado
-        let accion
+
         try{
             if(type === 'Carrito' ){
                 resultado = await this.coleccion.findOne({ID: `${id}`}, { projection: { PRODUCTOS: 1 }})
@@ -109,8 +91,7 @@ class Class_Mongo {
                         {$set: {
                             TIMESTAMP: `${hoy.toDateString() +' '+  hoy.toLocaleTimeString()}`,
                             PRODUCTOS: resultado.PRODUCTOS
-                        }}) 
-                accion = 'agrego el producto al carrito!'                                  
+                        }})                                 
                 }
             } else if(type === 'Producto'){
                 resultado = await this.coleccion.findOneAndUpdate({ID: `${id}`}, 
@@ -123,15 +104,16 @@ class Class_Mongo {
                         PRECIO: dato.PRECIO,
                         STOCK: dato.STOCK
                     }})
-                resultado = resultado.value
-                accion = 'actualizo el producto!'                                  
+                resultado = resultado.value                               
             } else if(type === 'CarrRmProd'){
                 resultado = await this.coleccion.findOne({ID: `${id}`}, { projection: { PRODUCTOS: 1 }})
+                
                 const IndiceProdBuscado = resultado.PRODUCTOS.findIndex(p => p.ID == dato)
+
                 if(IndiceProdBuscado === -1){
-                    const error = new Error(`El producto con id ${dato} no se encuntra en el carrito`)
-                    error.tipo = 'db not found'
-                    throw error
+
+                    throw crearError('NOT_FOUND', `El producto con id ${dato} no se encuntra en el carrito`)
+                
                 } else{
                     resultado.PRODUCTOS.splice(IndiceProdBuscado,1)
                     await this.coleccion.findOneAndUpdate({ID: `${id}`}, 
@@ -140,24 +122,14 @@ class Class_Mongo {
                             PRODUCTOS: resultado.PRODUCTOS
                         }})
                 }
-                accion = 'quito el producto del carrito!'
             } else {
-                const error = new Error(`Typo ${type} desconocido `)
-                error.tipo = 'unknown type'
-                throw error
+                throw crearError('UNKNOWN_TYPE', `Tipo ${type} desconocido`)
             }
             if(!resultado){
-                const error = new Error(`El ${type} con id ${id} no fue encotrado`)
-                error.tipo = 'db not found'
-                throw error
-            } else {
-                console.log(`Se ${accion}`)
+                throw crearError('NOT_FOUND', `El ${type} con id ${id} no fue encotrado`)
             }
         }
         catch(error){
-            if(error.tipo != 'db not found' && error.tipo != 'unknown type' ){
-                console.log(`No se pudo ${accion}`)
-            }
             throw error
         }
     }
@@ -166,21 +138,12 @@ class Class_Mongo {
         try{
             const ElementoBuscado = await this.coleccion.findOne({ID: `${id}`})
             if (!ElementoBuscado) {
-                const error = new Error('No existe el elemento buscado')
-                error.tipo = 'db not found'
-                throw error
+                throw crearError('NOT_FOUND', `El elemento con id ${id} no fue encotrado`)
             }
             return ElementoBuscado
         }
         catch(error){
-            if(error.tipo === 'db not found'){
-                throw error
-            } else{
-                console.log('No se pudo leer el archivo. :(')
-                console.log(error)
-                throw error
-            }
-          
+            throw error
         }
     }
 }

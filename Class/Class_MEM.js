@@ -1,4 +1,4 @@
-
+import crearError from "../Tools/Error_Generator"
 
 
 class Class_MEM {
@@ -30,17 +30,12 @@ class Class_MEM {
                     STOCK: datos.STOCK
                 }
             } else {
-                const error = new Error('Producto Duplicado')
-                error.tipo = 'duplicated product'
-                throw error
+                throw crearError('DUPLICATED_PRODUCT')
             }
         } else {
-            const error = new Error(`Typo ${type} desconocido `)
-            error.tipo = 'unknown type'
-            throw error
+            throw crearError('UNKNOWN_TYPE', `Tipo ${type} desconocido`)
         }
         this.Objects.push(NewElement)
-        console.log(`Nuevo ${type} creado`)
         if(type === 'Carrito') {
             return id
         }
@@ -55,20 +50,14 @@ class Class_MEM {
             error.tipo = 'db not found'
             throw error
         } else {
-            let accion
             if(type === 'Carrito' ){
-                this.Objects[indiceBuscado].PRODUCTOS = [] 
-                accion = 'vaciado'               
+                this.Objects[indiceBuscado].PRODUCTOS = []      
             } else if(type === 'Producto'){
-                this.Objects.splice(indiceBuscado,1)
-                accion = 'borrado'   
+                this.Objects.splice(indiceBuscado,1)  
             } else {
-                const error = new Error(`Typo ${type} desconocido `)
-                error.tipo = 'unknown type'
-                throw error
+                throw crearError('UNKNOWN_TYPE', `Tipo ${type} desconocido`)
             }
         }
-        console.log(`El ${type} se a ${accion} exitosamente!`)
     }
     getAll(){
         return this.Objects
@@ -78,15 +67,11 @@ class Class_MEM {
         let hoy = new Date()
         const indiceBuscado = this.Objects.findIndex(p => p.ID == id)
         if(indiceBuscado === -1){
-            const error = new Error(`El ${type} no fue encotrado`)
-            error.tipo = 'db not found'
-            throw error
+            throw crearError('NOT_FOUND', `El ${type} con id ${id} no fue encotrado`)
         } else {
-            let accion
             if(type === 'Carrito' ){
                 this.Objects[indiceBuscado].TIMESTAMP = `${hoy.toDateString() +' '+ hoy.toLocaleTimeString()}`,
-                this.Objects[indiceBuscado].PRODUCTOS.push(dato)  
-                accion = 'agrego el producto al carrito!'                             
+                this.Objects[indiceBuscado].PRODUCTOS.push(dato)                        
             } else if(type === 'Producto'){
                 this.Objects[indiceBuscado].TIMESTAMP = `${hoy.toDateString() +' '+ hoy.toLocaleTimeString()}`,
                 this.Objects[indiceBuscado].NOMBRE = dato.NOMBRE
@@ -95,33 +80,30 @@ class Class_MEM {
                 this.Objects[indiceBuscado].FOTO = dato.FOTO
                 this.Objects[indiceBuscado].PRECIO = dato.PRECIO
                 this.Objects[indiceBuscado].STOCK = dato.STOCK 
-                accion = 'actualizo el producto!'
             } else if(type === 'CarrRmProd'){
                 const IndiceProdBuscado = this.Objects[indiceBuscado].PRODUCTOS.findIndex(p => p.ID == dato)
                 if(IndiceProdBuscado === -1){
-                    const error = new Error(`El producto con id ${dato} no se encuntra en el carrito`)
-                    error.tipo = 'db not found'
-                    throw error
+                    throw crearError('NOT_FOUND', `El producto con id ${dato} no se encuntra en el carrito`)
                 } else{
                     this.Objects[indiceBuscado].PRODUCTOS.splice(IndiceProdBuscado,1)
                 }
                 accion = 'quito el producto del carrito!'
             } else {
-                const error = new Error(`Typo ${type} desconocido `)
-                error.tipo = 'unknown type'
-                throw error
+                throw crearError('UNKNOWN_TYPE', `Tipo ${type} desconocido`)
             }
-            console.log(`Se ${accion}`)
         }
     }
     getByID(id){
-        const ElementoBuscado = this.Objects.find(p => p.ID == id)
-        if (!ElementoBuscado) {
-            const error = new Error('No existe el elemento buscado')
-            error.tipo = 'db not found'
+        try{
+            const ElementoBuscado = this.Objects.find(p => p.ID == id)
+            if (!ElementoBuscado) {
+                throw crearError('NOT_FOUND')
+            }
+            return ElementoBuscado
+        }
+        catch(error){
             throw error
         }
-        return ElementoBuscado
     }
 }
 

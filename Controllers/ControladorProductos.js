@@ -1,80 +1,61 @@
 import { ProductosDao } from '../DAOs/Productos/index.js'
+import crearError from '../Tools/Error_Generator.js'
+import logger from '../Tools/logger.js'
 
 
 const ControladorProductos = {
-    AllProd: async (req, res) => {
+    AllProd: async (req, res, next) => {
         let AllProd = await ProductosDao.getAll()
         res.send(AllProd)
     },
-    ProdByID: async (req, res) => {
+    ProdByID: async (req, res, next) => {
         const id = req.params.id
         try {
             const ProductoBuscado = await ProductosDao.getByID(id);
             res.json(ProductoBuscado)
         } catch (error) {
-            if (error.tipo === 'db not found') {
-                res.status(404).json({ error: error.message })
-            } else {
-                res.status(500).json({ error: error.message })
-            }
+            next(error)
         }
     },
-    AddNewProd: async (req, res) => {
+    AddNewProd: async (req, res, next) => {
         let NewProduct = req.body
         try {
             if (itValidProd(NewProduct)){
                    NewProduct =  await ProductosDao.save(NewProduct)
             } else {
-                const error = new Error('El formato no es correcto')
-                error.tipo = 'bad format'
-                throw error
+                throw crearError('MISSING_DATA')
             }
+            logger.info(`Se creo el producto ${NewProduct}`)
             res.status(201).json(NewProduct)
         } catch (error) {
-            if (error.tipo === 'bad format'){
-                res.status(406).json({ error: error.message })
-            }else if (error.tipo === 'duplicated product'){
-                res.status(409).json({ error: error.message })
-            }else {
-                res.status(500).json({ error: error.message })
-            }
+            next(error)
 
         }
     },
-    UpdateProd: async (req, res) => {
+    UpdateProd: async (req, res, next) => {
         const id = req.params.id
         const UpdateData = req.body
         try {
             if (itValidProd(UpdateData)){
                     await ProductosDao.update(id, UpdateData)
             } else {
-                const error = new Error('El formato no es correcto')
-                error.tipo = 'bad format'
-                throw error
+                throw crearError('MISSING_DATA')
             }
+            logger.info(`Se actualizó el producto ${id} con los datos: ${UpdateData}`)
             res.status(202).json(UpdateData)
         } catch (error) {
-            if (error.tipo === 'bad format'){
-                res.status(406).json({ error: error.message })
-            } else if (error.tipo === 'db not found') {
-                res.status(404).json({ error: error.message })
-            }else {
-                res.status(500).json({ error: error.message })
-            }
+            next(error)
 
         }
     },
-    DeleteProdByID: async (req, res) => {
+    DeleteProdByID: async (req, res, next) => {
         const id = req.params.id
         try {
             await ProductosDao.deleteById(id);
+            logger.info(`Se actualizó elimino producto ${id}`)
             res.status(202).json('Producto Eliminado con exito')
         } catch (error) {
-            if (error.tipo === 'db not found') {
-                res.status(404).json({ error: error.message })
-            } else {
-                res.status(500).json({ error: error.message })
-            }
+            next(error)
         }
     }
 
@@ -95,7 +76,7 @@ function itValidProd(Dato){
                     return true
                 } else{
                     return false
-                }
+                } 
             } else{
                 return false
             }

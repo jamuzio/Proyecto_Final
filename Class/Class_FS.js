@@ -1,5 +1,5 @@
 import fs from 'fs'
-
+import crearError from '../Tools/Error_Generator'
 
 class Class_FS {
     constructor (File){
@@ -13,14 +13,11 @@ class Class_FS {
             if (error.code === 'ENOENT') {  //si es la primera ejecucion y no existe el archivo lo creo
                 try{
                     fs.writeFileSync(this.File, '[]')
-                    console.log(`Se creo el archivo ${this.File}`)
                 }
                 catch{
-                    console.log(`No se pudo crear el archivo ${this.File}`)
                     throw error
                 }
                } else {
-                    console.log(`No se pudo leer el archivo ${this.File}`)
                     throw error
                }
         }
@@ -49,20 +46,15 @@ class Class_FS {
                     STOCK: datos.STOCK
                 }
             } else {
-                const error = new Error('Producto Duplicado')
-                error.tipo = 'duplicated product'
-                throw error
+                throw crearError('DUPLICATED_PRODUCT')
             }
         } else {
-            const error = new Error(`Typo ${type} desconocido `)
-            error.tipo = 'unknown type'
-            throw error
+            throw crearError('UNKNOWN_TYPE', `Tipo ${type} desconocido`)
         }
         this.Objects.push(NewElement)
         let ObjectJSON = JSON.stringify(this.Objects)
         try{
             await fs.promises.writeFile(this.File, ObjectJSON)
-            console.log(`Nuevo ${type} creado`)
             if(type === 'Carrito') {
                 return id
             }
@@ -71,7 +63,6 @@ class Class_FS {
             }
         }
         catch(error){
-            console.log(`No se pudo crear un nuevo ${type}.`)
             throw error
         }
     }
@@ -79,29 +70,21 @@ class Class_FS {
         let BKArry = this.Objects.splice()
         const indiceBuscado = this.Objects.findIndex(p => p.ID == id)
         if(indiceBuscado === -1){
-            const error = new Error(`El ${type} con id ${id} no fue encotrado`)
-            error.tipo = 'db not found'
-            throw error
+            throw crearError('NOT_FOUND', `El ${type} con id ${id} no fue encotrado`)
         } else {
-            let accion
             if(type === 'Carrito' ){
-                this.Objects[indiceBuscado].PRODUCTOS = [] 
-                accion = 'vaciado'               
+                this.Objects[indiceBuscado].PRODUCTOS = []              
             } else if(type === 'Producto'){
                 this.Objects.splice(indiceBuscado,1)
-                accion = 'borrado'   
             } else {
-                const error = new Error(`Typo ${type} desconocido `)
-                error.tipo = 'unknown type'
-                throw error
+                throw crearError('UNKNOWN_TYPE', `Tipo ${type} desconocido`)
             }
             let ObjectJSON = JSON.stringify(this.Objects)
+
             try{
                 await fs.promises.writeFile(this.File, ObjectJSON)
-                console.log(`El ${type} se a ${accion} exitosamente!`)
             }
             catch(error){
-                console.log(`El ${type} no pudo ser ${accion}`)
                 this.Objects = BKArry
                 throw error
             }
@@ -114,7 +97,6 @@ class Class_FS {
             return this.Objects
         }
         catch(error){
-            console.log('No se pudo leer el archivo. :(')
             throw error
         }
     }
@@ -124,15 +106,11 @@ class Class_FS {
         let hoy = new Date()
         const indiceBuscado = this.Objects.findIndex(p => p.ID == id)
         if(indiceBuscado === -1){
-            const error = new Error(`El ${type} no fue encotrado`)
-            error.tipo = 'db not found'
-            throw error
+            throw crearError('NOT_FOUND', `El ${type} con id ${id} no fue encotrado`)
         } else {
-            let accion
             if(type === 'Carrito' ){
                 this.Objects[indiceBuscado].TIMESTAMP = `${hoy.toDateString() +' '+ hoy.toLocaleTimeString()}`,
-                this.Objects[indiceBuscado].PRODUCTOS.push(dato)  
-                accion = 'agrego el producto al carrito!'                             
+                this.Objects[indiceBuscado].PRODUCTOS.push(dato)                               
             } else if(type === 'Producto'){
                 this.Objects[indiceBuscado].TIMESTAMP = `${hoy.toDateString() +' '+ hoy.toLocaleTimeString()}`,
                 this.Objects[indiceBuscado].NOMBRE = dato.NOMBRE
@@ -141,29 +119,21 @@ class Class_FS {
                 this.Objects[indiceBuscado].FOTO = dato.FOTO
                 this.Objects[indiceBuscado].PRECIO = dato.PRECIO
                 this.Objects[indiceBuscado].STOCK = dato.STOCK 
-                accion = 'actualizo el producto!'
             } else if(type === 'CarrRmProd'){
                 const IndiceProdBuscado = this.Objects[indiceBuscado].PRODUCTOS.findIndex(p => p.ID == dato)
                 if(IndiceProdBuscado === -1){
-                    const error = new Error(`El producto con id ${dato} no se encuntra en el carrito`)
-                    error.tipo = 'db not found'
-                    throw error
+                    throw crearError('NOT_FOUND', `El producto con id ${dato} no se encuntra en el carrito`)
                 } else{
                     this.Objects[indiceBuscado].PRODUCTOS.splice(IndiceProdBuscado,1)
                 }
-                accion = 'quito el producto del carrito!'
             } else {
-                const error = new Error(`Typo ${type} desconocido `)
-                error.tipo = 'unknown type'
-                throw error
+                throw crearError('UNKNOWN_TYPE', `Tipo ${type} desconocido`)
             }
             let ObjectJSON = JSON.stringify(this.Objects)
             try{
                 await fs.promises.writeFile(this.File, ObjectJSON)
-                console.log(`Se ${accion}`)
             }
             catch(error){
-                console.log(`No se pudo ${accion}`)
                 this.Objects = BKArry
                 throw error
             }
@@ -175,21 +145,12 @@ class Class_FS {
             this.Objects = JSON.parse(FileData)
             const ElementoBuscado = this.Objects.find(p => p.ID == id)
             if (!ElementoBuscado) {
-                const error = new Error('No existe el elemento buscado')
-                error.tipo = 'db not found'
-                throw error
+                throw crearError('NOT_FOUND')
             }
             return ElementoBuscado
         }
         catch(error){
-            if(error.tipo === 'db not found'){
-                throw error
-            } else{
-                console.log('No se pudo leer el archivo. :(')
-                console.log(error)
-                throw error
-            }
-          
+            throw error
         }
     }
 }

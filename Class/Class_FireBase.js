@@ -1,5 +1,5 @@
 import db from "../DataBase/FireBaseServer.js"
-
+import crearError from "../Tools/Error_Generator.js"
 
 class Class_FireBase {
     constructor (coleccion){
@@ -31,18 +31,13 @@ class Class_FireBase {
                         STOCK: datos.STOCK
                     }
                 } else {
-                    const error = new Error('Producto Duplicado')
-                    error.tipo = 'duplicated product'
-                    throw error
+                    throw crearError('DUPLICATED_PRODUCT')
                 }
             } else {
-                const error = new Error(`Typo ${type} desconocido `)
-                error.tipo = 'unknown type'
-                throw error
+                throw crearError('UNKNOWN_TYPE', `Tipo ${type} desconocido`)
             }
             await doc.create(NewElement)
             NewElement.ID = `${id}`
-            console.log(`Nuevo ${type} creado`)
             if(type === 'Carrito') {
                 return id
             }
@@ -51,44 +46,32 @@ class Class_FireBase {
             }
         }
         catch(error){
-            console.log(`No se pudo crear un nuevo ${type}.`)
             throw error
         }
     }
     async cleanById(id, type){
-        let accion
         let resultado
         let doc = this.coleccion.doc(`${id}`)
         try{
             if(type === 'Carrito' ){
-                resultado = await doc.update({PRODUCTOS: []})
-                accion = 'vaciado'               
+                resultado = await doc.update({PRODUCTOS: []})            
             } else if(type === 'Producto'){
                 resultado = await doc.get()
-                if(!resultado){
-                    const error = new Error(`El ${type} con id ${id} no fue encotrado`)
-                    error.tipo = 'db not found'
-                    throw error
-                }
-                await doc.delete()
-                accion = 'borrado'   
+                await doc.delete() 
             } else {
-                const error = new Error(`Typo ${type} desconocido `)
-                error.tipo = 'unknown type'
-                throw error
+                throw crearError('UNKNOWN_TYPE', `Tipo ${type} desconocido`)
             }
-            console.log(`El ${type} se a ${accion} exitosamente!`)
+            if(!resultado){
+                throw crearError('NOT_FOUND', `El ${type} con id ${id} no fue encotrado`)
+            }
         }
         catch(error){
             if(error.code === 5){
-                error = new Error(`El ${type} con id ${id} no fue encotrado`)
-                error.tipo = 'db not found'
+                throw crearError('NOT_FOUND', `El ${type} con id ${id} no fue encotrado`)
+            }
+            else {
                 throw error
             }
-            else if(error.tipo != 'db not found' && error.tipo != 'unknown type' ){
-                console.log(`El ${type} no pudo ser ${accion}`)
-            }
-            throw error
         }
     }
     async getAll(){
@@ -97,7 +80,6 @@ class Class_FireBase {
             return AllObjects
         }
         catch(error){
-            console.log('No se pudo leer la base')
             throw error
         }
     }
@@ -105,7 +87,6 @@ class Class_FireBase {
     async update(id, dato, type){
         let hoy = new Date()
         let resultado
-        let accion
         let doc = this.coleccion.doc(`${id}`)
         try{
             if(type === 'Carrito' ){
@@ -116,8 +97,7 @@ class Class_FireBase {
                     await doc.update({
                         TIMESTAMP: `${hoy.toDateString() +' '+  hoy.toLocaleTimeString()}`,
                         PRODUCTOS: resultado.PRODUCTOS
-                    })
-                accion = 'agrego el producto al carrito!'                                  
+                    })                                
                 }
             } else if(type === 'Producto'){
                 await doc.update({
@@ -128,17 +108,14 @@ class Class_FireBase {
                         FOTO: dato.FOTO,
                         PRECIO: dato.PRECIO,
                         STOCK: dato.STOCK
-                    })
-                accion = 'actualizo el producto!'                                  
+                    })                             
             } else if(type === 'CarrRmProd'){
                 resultado = await doc.get()
                 resultado = resultado.data()
                 if(!!resultado){
                     const IndiceProdBuscado = resultado.PRODUCTOS.findIndex(p => p.ID == dato)
                     if(IndiceProdBuscado === -1){
-                        const error = new Error(`El producto con id ${dato} no se encuntra en el carrito`)
-                        error.tipo = 'db not found'
-                        throw error
+                        throw crearError('NOT_FOUND', `El producto con id ${dato} no se encuntra en el carrito`)
                     } else{
                         resultado.PRODUCTOS.splice(IndiceProdBuscado,1)
                         await doc.update({
@@ -146,24 +123,17 @@ class Class_FireBase {
                             PRODUCTOS: resultado.PRODUCTOS
                         })
                     }
-                    accion = 'quito el producto del carrito!'
                     }
             } else {
-                const error = new Error(`Typo ${type} desconocido `)
-                error.tipo = 'unknown type'
-                throw error
+                throw crearError('UNKNOWN_TYPE', `Tipo ${type} desconocido`)
             }
-            console.log(`Se ${accion}`)
         }
         catch(error){
             if(error.code === 5){
-                error = new Error(`El ${type} con id ${id} no fue encotrado`)
-                error.tipo = 'db not found'
+                throw crearError('NOT_FOUND', `El ${type} con id ${id} no fue encotrado`)
+            } else {
                 throw error
-            } else if(error.tipo != 'db not found' && error.tipo != 'unknown type' ){
-                console.log(`No se pudo ${accion}`)
             }
-            throw error
         }
     }
     async getByID(id){
@@ -171,22 +141,13 @@ class Class_FireBase {
         try{
             let ElementoBuscado = await doc.get()
             if (!ElementoBuscado) {
-                const error = new Error('No existe el elemento buscado')
-                error.tipo = 'db not found'
-                throw error
+                throw crearError('NOT_FOUND')
             }
             ElementoBuscado = ElementoBuscado.data()
             return ElementoBuscado
         }
         catch(error){
-            if(error.tipo === 'db not found'){
-                throw error
-            } else{
-                console.log('No se pudo leer el archivo. :(')
-                console.log(error)
-                throw error
-            }
-          
+            throw error
         }
     }
 }
