@@ -17,7 +17,7 @@ const ControladorCarrito = {
     CreateNew: async (req, res, next) => {
         try {
             const NewId = await CarritoDao.create()
-            logger.info(`Se a creado un nuevo carrito con id: ${id}`)
+            logger.info(`Se a creado un nuevo carrito con id: ${NewId}`)
             res.status(201).json({NewId})
         } catch (error) {
             next(error)
@@ -65,4 +65,18 @@ const ControladorCarrito = {
 
 }
 
-export { ControladorCarrito }
+const FuncionsCarrito = {
+    CreateNew: async () => {
+        try {
+            const NewId = await CarritoDao.create()
+            logger.info(`Se a creado un nuevo carrito con id: ${NewId}`)
+            return NewId.toString()
+        } catch (error) {
+            throw error
+            }
+    }
+}
+
+
+
+export { ControladorCarrito, FuncionsCarrito }

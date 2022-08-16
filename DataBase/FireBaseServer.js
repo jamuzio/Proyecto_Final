@@ -1,14 +1,14 @@
 import admin from "firebase-admin"
+import logger from "../Tools/logger.js";
 
 const serviceAccount = JSON.parse(process.env.FIRE_BASE)
 try{
     admin.initializeApp({
         credential: admin.credential.cert(serviceAccount)
     });
-    console.log('Base Firebase conectada!')
     
 } catch(error) {
-    console.log('No se pudo conectar a la base')
+    logger.fatal(`A ocurrido un error al iniciar la base: \n\t ${error.stack}`)
     throw error
 }
 const db = admin.firestore();

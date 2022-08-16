@@ -1,0 +1,422 @@
+[2022-08-15T15:52:28.301] [FATAL] default - A ocurrido un error al iniciar la base MongoServerError: bad auth : Authentication failed.
+    at Connection.onMessage (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\mongodb\lib\cmap\connection.js:210:30)
+    at MessageStream.<anonymous> (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\mongodb\lib\cmap\connection.js:63:60)
+    at MessageStream.emit (node:events:390:28)
+    at processIncomingData (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\mongodb\lib\cmap\message_stream.js:132:20)
+    at MessageStream._write (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\mongodb\lib\cmap\message_stream.js:33:9)
+    at writeOrBuffer (node:internal/streams/writable:389:12)
+    at _write (node:internal/streams/writable:330:10)
+    at MessageStream.Writable.write (node:internal/streams/writable:334:10)
+    at TLSSocket.ondata (node:internal/streams/readable:754:22)
+    at TLSSocket.emit (node:events:390:28)
+[2022-08-15T15:53:43.462] [FATAL] default - A ocurrido un error al iniciar la base: 
+	 MongoServerError: bad auth : Authentication failed.
+    at Connection.onMessage (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\mongodb\lib\cmap\connection.js:210:30)
+    at MessageStream.<anonymous> (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\mongodb\lib\cmap\connection.js:63:60)
+    at MessageStream.emit (node:events:390:28)
+    at processIncomingData (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\mongodb\lib\cmap\message_stream.js:132:20)
+    at MessageStream._write (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\mongodb\lib\cmap\message_stream.js:33:9)
+    at writeOrBuffer (node:internal/streams/writable:389:12)
+    at _write (node:internal/streams/writable:330:10)
+    at MessageStream.Writable.write (node:internal/streams/writable:334:10)
+    at TLSSocket.ondata (node:internal/streams/readable:754:22)
+    at TLSSocket.emit (node:events:390:28)
+[2022-08-15T21:32:19.374] [FATAL] default - ATENCION: A ocurrido un error sin manejo especifico. 
+	 ReferenceError: MongoID is not defined
+    at UsuarioDaoMongoDb.getByID (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/Class/Class_Mongo.js:186:72)
+    at UsuarioDaoMongoDb.getByID (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/DAOs/Usuarios/UsuarioDaoMongoDb.js:52:45)
+    at file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/Middleware/passport.js:50:36
+    at pass (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\passport\lib\authenticator.js:354:9)
+    at Authenticator.deserializeUser (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\passport\lib\authenticator.js:359:5)
+    at SessionStrategy.authenticate (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\passport\lib\strategies\session.js:61:10)
+    at attempt (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\passport\lib\middleware\authenticate.js:369:16)
+    at authenticate (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\passport\lib\middleware\authenticate.js:370:7)
+    at Layer.handle [as handle_request] (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\express\lib\router\index.js:328:13) 
+[2022-08-15T21:34:50.504] [FATAL] default - ATENCION: A ocurrido un error sin manejo especifico. 
+	 ReferenceError: MongoID is not defined
+    at UsuarioDaoMongoDb.getByID (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/Class/Class_Mongo.js:186:72)
+    at UsuarioDaoMongoDb.getByID (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/DAOs/Usuarios/UsuarioDaoMongoDb.js:52:45)
+    at file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/Middleware/passport.js:50:36
+    at pass (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\passport\lib\authenticator.js:354:9)
+    at Authenticator.deserializeUser (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\passport\lib\authenticator.js:359:5)
+    at SessionStrategy.authenticate (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\passport\lib\strategies\session.js:61:10)
+    at attempt (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\passport\lib\middleware\authenticate.js:369:16)
+    at authenticate (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\passport\lib\middleware\authenticate.js:370:7)
+    at Layer.handle [as handle_request] (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\express\lib\router\index.js:328:13) 
+[2022-08-15T22:14:37.567] [FATAL] default - ATENCION: A ocurrido un error sin manejo especifico. 
+	 Error: Unable to find the session to touch
+    at D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\connect-mongo\build\main\lib\MongoStore.js:326:37
+    at processTicksAndRejections (node:internal/process/task_queues:96:5) 
+[2022-08-15T22:20:33.532] [FATAL] default - ATENCION: A ocurrido un error sin manejo especifico. 
+	 Error: Unable to find the session to touch
+    at D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\connect-mongo\build\main\lib\MongoStore.js:326:37
+    at processTicksAndRejections (node:internal/process/task_queues:96:5) 
+[2022-08-15T22:47:21.232] [FATAL] default - ATENCION: A ocurrido un error sin manejo especifico. 
+	 ReferenceError: error is not defined
+    at file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/Routers/routerSessions.js:9:5
+    at Layer.handle [as handle_request] (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\express\lib\router\route.js:144:13)
+    at complete (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\passport\lib\middleware\authenticate.js:271:13)
+    at D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\passport\lib\middleware\authenticate.js:278:15
+    at pass (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\passport\lib\authenticator.js:428:14)
+    at Authenticator.transformAuthInfo (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\passport\lib\authenticator.js:450:5)
+    at D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\passport\lib\middleware\authenticate.js:275:22
+    at D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\passport\lib\http\request.js:41:7
+    at D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\passport\lib\sessionmanager.js:51:9 
+[2022-08-15T22:48:12.987] [FATAL] default - ATENCION: A ocurrido un error sin manejo especifico. 
+	 ReferenceError: next is not defined
+    at file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/Routers/routerSessions.js:10:9
+    at Layer.handle [as handle_request] (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\express\lib\router\route.js:144:13)
+    at complete (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\passport\lib\middleware\authenticate.js:271:13)
+    at D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\passport\lib\middleware\authenticate.js:278:15
+    at pass (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\passport\lib\authenticator.js:428:14)
+    at Authenticator.transformAuthInfo (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\passport\lib\authenticator.js:450:5)
+    at D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\passport\lib\middleware\authenticate.js:275:22
+    at D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\passport\lib\http\request.js:41:7
+    at D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\passport\lib\sessionmanager.js:51:9 
+[2022-08-15T23:15:21.217] [FATAL] default - ReferenceError: datos is not defined
+    at ValidUser (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/DAOs/Usuarios/UsuarioDaoMongoDb.js:63:5)
+    at UsuarioDaoMongoDb.save (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/DAOs/Usuarios/UsuarioDaoMongoDb.js:12:16)
+    at Strategy._verify (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/Middleware/passport.js:17:40)
+    at Strategy.authenticate (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\passport-local\lib\strategy.js:88:12)
+    at attempt (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\passport\lib\middleware\authenticate.js:369:16)
+    at authenticate (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\passport\lib\middleware\authenticate.js:370:7)
+    at Layer.handle [as handle_request] (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\express\lib\router\layer.js:95:5)
+[2022-08-15T23:15:21.223] [FATAL] default - ATENCION: A ocurrido un error sin manejo especifico. 
+	 ReferenceError: datos is not defined
+    at ValidUser (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/DAOs/Usuarios/UsuarioDaoMongoDb.js:63:5)
+    at UsuarioDaoMongoDb.save (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/DAOs/Usuarios/UsuarioDaoMongoDb.js:12:16)
+    at Strategy._verify (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/Middleware/passport.js:17:40)
+    at Strategy.authenticate (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\passport-local\lib\strategy.js:88:12)
+    at attempt (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\passport\lib\middleware\authenticate.js:369:16)
+    at authenticate (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\passport\lib\middleware\authenticate.js:370:7)
+    at Layer.handle [as handle_request] (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\express\lib\router\layer.js:95:5) 
+[2022-08-15T23:16:22.435] [ERROR] default - Error: Se requieren mas datos para completar esta accion
+    at crearError (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/Tools/Error_Generator.js:32:19)
+    at UsuarioDaoMongoDb.save (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/DAOs/Usuarios/UsuarioDaoMongoDb.js:13:27)
+    at Strategy._verify (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/Middleware/passport.js:17:40)
+    at Strategy.authenticate (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\passport-local\lib\strategy.js:88:12)
+    at attempt (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\passport\lib\middleware\authenticate.js:369:16)
+    at authenticate (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\passport\lib\middleware\authenticate.js:370:7)
+    at Layer.handle [as handle_request] (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\express\lib\router\layer.js:95:5) {
+  tipo: 'MISSING_DATA'
+}
+[2022-08-15T23:20:24.675] [FATAL] default - ATENCION: A ocurrido un error sin manejo especifico. 
+	 SyntaxError: Unexpected string in JSON at position 97
+    at JSON.parse (<anonymous>)
+    at parse (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\body-parser\lib\types\json.js:89:19)
+    at D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\body-parser\lib\read.js:128:18
+    at AsyncResource.runInAsyncScope (node:async_hooks:199:9)
+    at invokeCallback (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\raw-body\index.js:231:16)
+    at done (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\raw-body\index.js:220:7)
+    at IncomingMessage.onEnd (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\raw-body\index.js:280:7)
+    at IncomingMessage.emit (node:events:402:35)
+    at endReadableNT (node:internal/streams/readable:1343:12)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21) 
+[2022-08-15T23:20:42.679] [ERROR] default - Error: Se requieren mas datos para completar esta accion
+    at crearError (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/Tools/Error_Generator.js:32:19)
+    at UsuarioDaoMongoDb.save (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/DAOs/Usuarios/UsuarioDaoMongoDb.js:13:27)
+    at Strategy._verify (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/Middleware/passport.js:17:40)
+    at Strategy.authenticate (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\passport-local\lib\strategy.js:88:12)
+    at attempt (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\passport\lib\middleware\authenticate.js:369:16)
+    at authenticate (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\passport\lib\middleware\authenticate.js:370:7)
+    at Layer.handle [as handle_request] (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\express\lib\router\layer.js:95:5) {
+  tipo: 'MISSING_DATA'
+}
+[2022-08-15T23:21:23.390] [ERROR] default - Error: Se requieren mas datos para completar esta accion
+    at crearError (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/Tools/Error_Generator.js:32:19)
+    at UsuarioDaoMongoDb.save (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/DAOs/Usuarios/UsuarioDaoMongoDb.js:13:27)
+    at Strategy._verify (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/Middleware/passport.js:17:40)
+    at Strategy.authenticate (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\passport-local\lib\strategy.js:88:12)
+    at attempt (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\passport\lib\middleware\authenticate.js:369:16)
+    at authenticate (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\passport\lib\middleware\authenticate.js:370:7)
+    at Layer.handle [as handle_request] (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\express\lib\router\layer.js:95:5) {
+  tipo: 'MISSING_DATA'
+}
+[2022-08-15T23:24:07.631] [ERROR] default - Error: Se requieren mas datos para completar esta accion
+    at crearError (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/Tools/Error_Generator.js:32:19)
+    at UsuarioDaoMongoDb.save (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/DAOs/Usuarios/UsuarioDaoMongoDb.js:13:27)
+    at Strategy._verify (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/Middleware/passport.js:17:40)
+    at Strategy.authenticate (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\passport-local\lib\strategy.js:88:12)
+    at attempt (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\passport\lib\middleware\authenticate.js:369:16)
+    at authenticate (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\passport\lib\middleware\authenticate.js:370:7)
+    at Layer.handle [as handle_request] (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\express\lib\router\layer.js:95:5) {
+  tipo: 'MISSING_DATA'
+}
+[2022-08-15T23:25:00.280] [ERROR] default - Error: Se requieren mas datos para completar esta accion
+    at crearError (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/Tools/Error_Generator.js:32:19)
+    at UsuarioDaoMongoDb.save (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/DAOs/Usuarios/UsuarioDaoMongoDb.js:13:27)
+    at Strategy._verify (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/Middleware/passport.js:17:40)
+    at Strategy.authenticate (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\passport-local\lib\strategy.js:88:12)
+    at attempt (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\passport\lib\middleware\authenticate.js:369:16)
+    at authenticate (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\passport\lib\middleware\authenticate.js:370:7)
+    at Layer.handle [as handle_request] (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\express\lib\router\layer.js:95:5) {
+  tipo: 'MISSING_DATA'
+}
+[2022-08-15T23:26:09.549] [ERROR] default - Error: El elemento con id 62fb000ec11fa58d8cfab83f no fue encotrado
+    at crearError (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/Tools/Error_Generator.js:32:19)
+    at UsuarioDaoMongoDb.getByID (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/Class/Class_Mongo.js:191:23)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async UsuarioDaoMongoDb.getByID (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/DAOs/Usuarios/UsuarioDaoMongoDb.js:51:33)
+    at async file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/Middleware/passport.js:54:22 {
+  tipo: 'NOT_FOUND'
+}
+[2022-08-15T23:26:09.554] [ERROR] default - NOT_FOUND: El elemento con id 62fb000ec11fa58d8cfab83f no fue encotrado
+[2022-08-15T23:26:45.549] [ERROR] default - Error: El elemento con id 62fb000ec11fa58d8cfab83f no fue encotrado
+    at crearError (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/Tools/Error_Generator.js:32:19)
+    at UsuarioDaoMongoDb.getByID (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/Class/Class_Mongo.js:191:23)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async UsuarioDaoMongoDb.getByID (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/DAOs/Usuarios/UsuarioDaoMongoDb.js:51:33)
+    at async file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/Middleware/passport.js:54:22 {
+  tipo: 'NOT_FOUND'
+}
+[2022-08-15T23:26:45.551] [ERROR] default - NOT_FOUND: El elemento con id 62fb000ec11fa58d8cfab83f no fue encotrado
+[2022-08-15T23:29:36.627] [FATAL] default - ATENCION: A ocurrido un error sin manejo especifico. 
+	 SyntaxError: Unexpected token } in JSON at position 215
+    at JSON.parse (<anonymous>)
+    at parse (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\body-parser\lib\types\json.js:89:19)
+    at D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\body-parser\lib\read.js:128:18
+    at AsyncResource.runInAsyncScope (node:async_hooks:199:9)
+    at invokeCallback (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\raw-body\index.js:231:16)
+    at done (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\raw-body\index.js:220:7)
+    at IncomingMessage.onEnd (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\raw-body\index.js:280:7)
+    at IncomingMessage.emit (node:events:402:35)
+    at endReadableNT (node:internal/streams/readable:1343:12)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21) 
+[2022-08-15T23:29:44.138] [ERROR] default - Error: El elemento con id 62fb000ec11fa58d8cfab83f no fue encotrado
+    at crearError (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/Tools/Error_Generator.js:32:19)
+    at UsuarioDaoMongoDb.getByID (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/Class/Class_Mongo.js:191:23)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async UsuarioDaoMongoDb.getByID (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/DAOs/Usuarios/UsuarioDaoMongoDb.js:51:33)
+    at async file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/Middleware/passport.js:54:22 {
+  tipo: 'NOT_FOUND'
+}
+[2022-08-15T23:29:44.140] [ERROR] default - NOT_FOUND: El elemento con id 62fb000ec11fa58d8cfab83f no fue encotrado
+[2022-08-16T16:42:15.190] [ERROR] default - Error: Usuario ya regitrado
+    at crearError (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/Tools/Error_Generator.js:32:19)
+    at UsuarioDaoMongoDb.save (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/Class/Class_Mongo.js:52:31)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async UsuarioDaoMongoDb.save (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/DAOs/Usuarios/UsuarioDaoMongoDb.js:17:29)
+    at async Strategy._verify (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/Middleware/passport.js:17:26) {
+  tipo: 'DUPLICATED_USER'
+}
+[2022-08-16T17:41:55.650] [FATAL] default - ATENCION: A ocurrido un error sin manejo especifico. 
+	 Error: Unable to find the session to touch
+    at D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\connect-mongo\build\main\lib\MongoStore.js:326:37
+    at processTicksAndRejections (node:internal/process/task_queues:96:5) 
+[2022-08-16T18:03:57.132] [FATAL] default - TypeError [ERR_INVALID_URL]: Invalid URL
+    at new NodeError (node:internal/errors:371:5)
+    at onParseError (node:internal/url:552:9)
+    at new URL (node:internal/url:628:5)
+    at new Request (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/node_modules/node-fetch/src/request.js:55:16)
+    at file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/node_modules/node-fetch/src/index.js:51:19
+    at new Promise (<anonymous>)
+    at fetch (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/node_modules/node-fetch/src/index.js:49:9)
+    at UsuarioDaoMongoDb.save (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/DAOs/Usuarios/UsuarioDaoMongoDb.js:18:36)
+    at Strategy._verify (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/Middleware/passport.js:17:40)
+    at Strategy.authenticate (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\passport-local\lib\strategy.js:88:12) {
+  input: './api/carrito',
+  code: 'ERR_INVALID_URL'
+}
+[2022-08-16T18:03:57.141] [FATAL] default - ATENCION: A ocurrido un error sin manejo especifico. 
+	 TypeError [ERR_INVALID_URL]: Invalid URL
+    at new NodeError (node:internal/errors:371:5)
+    at onParseError (node:internal/url:552:9)
+    at new URL (node:internal/url:628:5)
+    at new Request (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/node_modules/node-fetch/src/request.js:55:16)
+    at file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/node_modules/node-fetch/src/index.js:51:19
+    at new Promise (<anonymous>)
+    at fetch (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/node_modules/node-fetch/src/index.js:49:9)
+    at UsuarioDaoMongoDb.save (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/DAOs/Usuarios/UsuarioDaoMongoDb.js:18:36)
+    at Strategy._verify (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/Middleware/passport.js:17:40)
+    at Strategy.authenticate (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\passport-local\lib\strategy.js:88:12) 
+[2022-08-16T18:05:17.150] [FATAL] default - TypeError [ERR_INVALID_URL]: Invalid URL
+    at new NodeError (node:internal/errors:371:5)
+    at onParseError (node:internal/url:552:9)
+    at new URL (node:internal/url:628:5)
+    at new Request (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/node_modules/node-fetch/src/request.js:55:16)
+    at file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/node_modules/node-fetch/src/index.js:51:19
+    at new Promise (<anonymous>)
+    at fetch (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/node_modules/node-fetch/src/index.js:49:9)
+    at UsuarioDaoMongoDb.save (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/DAOs/Usuarios/UsuarioDaoMongoDb.js:18:36)
+    at Strategy._verify (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/Middleware/passport.js:17:40)
+    at Strategy.authenticate (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\passport-local\lib\strategy.js:88:12) {
+  input: '/api/carrito',
+  code: 'ERR_INVALID_URL'
+}
+[2022-08-16T18:05:17.156] [FATAL] default - ATENCION: A ocurrido un error sin manejo especifico. 
+	 TypeError [ERR_INVALID_URL]: Invalid URL
+    at new NodeError (node:internal/errors:371:5)
+    at onParseError (node:internal/url:552:9)
+    at new URL (node:internal/url:628:5)
+    at new Request (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/node_modules/node-fetch/src/request.js:55:16)
+    at file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/node_modules/node-fetch/src/index.js:51:19
+    at new Promise (<anonymous>)
+    at fetch (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/node_modules/node-fetch/src/index.js:49:9)
+    at UsuarioDaoMongoDb.save (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/DAOs/Usuarios/UsuarioDaoMongoDb.js:18:36)
+    at Strategy._verify (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/Middleware/passport.js:17:40)
+    at Strategy.authenticate (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\passport-local\lib\strategy.js:88:12) 
+[2022-08-16T18:07:10.040] [FATAL] default - TypeError [ERR_INVALID_URL]: Invalid URL
+    at new NodeError (node:internal/errors:371:5)
+    at onParseError (node:internal/url:552:9)
+    at new URL (node:internal/url:628:5)
+    at new Request (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/node_modules/node-fetch/src/request.js:55:16)
+    at file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/node_modules/node-fetch/src/index.js:51:19
+    at new Promise (<anonymous>)
+    at fetch (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/node_modules/node-fetch/src/index.js:49:9)
+    at UsuarioDaoMongoDb.save (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/DAOs/Usuarios/UsuarioDaoMongoDb.js:18:36)
+    at Strategy._verify (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/Middleware/passport.js:17:40)
+    at Strategy.authenticate (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\passport-local\lib\strategy.js:88:12) {
+  input: '/api/carrito/',
+  code: 'ERR_INVALID_URL'
+}
+[2022-08-16T18:07:10.047] [FATAL] default - ATENCION: A ocurrido un error sin manejo especifico. 
+	 TypeError [ERR_INVALID_URL]: Invalid URL
+    at new NodeError (node:internal/errors:371:5)
+    at onParseError (node:internal/url:552:9)
+    at new URL (node:internal/url:628:5)
+    at new Request (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/node_modules/node-fetch/src/request.js:55:16)
+    at file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/node_modules/node-fetch/src/index.js:51:19
+    at new Promise (<anonymous>)
+    at fetch (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/node_modules/node-fetch/src/index.js:49:9)
+    at UsuarioDaoMongoDb.save (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/DAOs/Usuarios/UsuarioDaoMongoDb.js:18:36)
+    at Strategy._verify (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/Middleware/passport.js:17:40)
+    at Strategy.authenticate (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\passport-local\lib\strategy.js:88:12) 
+[2022-08-16T18:07:47.569] [FATAL] default - TypeError [ERR_INVALID_URL]: Invalid URL
+    at new NodeError (node:internal/errors:371:5)
+    at onParseError (node:internal/url:552:9)
+    at new URL (node:internal/url:628:5)
+    at new Request (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/node_modules/node-fetch/src/request.js:55:16)
+    at file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/node_modules/node-fetch/src/index.js:51:19
+    at new Promise (<anonymous>)
+    at fetch (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/node_modules/node-fetch/src/index.js:49:9)
+    at UsuarioDaoMongoDb.save (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/DAOs/Usuarios/UsuarioDaoMongoDb.js:18:36)
+    at Strategy._verify (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/Middleware/passport.js:17:40)
+    at Strategy.authenticate (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\passport-local\lib\strategy.js:88:12) {
+  input: './api/carrito/',
+  code: 'ERR_INVALID_URL'
+}
+[2022-08-16T18:07:47.578] [FATAL] default - ATENCION: A ocurrido un error sin manejo especifico. 
+	 TypeError [ERR_INVALID_URL]: Invalid URL
+    at new NodeError (node:internal/errors:371:5)
+    at onParseError (node:internal/url:552:9)
+    at new URL (node:internal/url:628:5)
+    at new Request (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/node_modules/node-fetch/src/request.js:55:16)
+    at file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/node_modules/node-fetch/src/index.js:51:19
+    at new Promise (<anonymous>)
+    at fetch (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/node_modules/node-fetch/src/index.js:49:9)
+    at UsuarioDaoMongoDb.save (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/DAOs/Usuarios/UsuarioDaoMongoDb.js:18:36)
+    at Strategy._verify (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/Middleware/passport.js:17:40)
+    at Strategy.authenticate (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\passport-local\lib\strategy.js:88:12) 
+[2022-08-16T18:14:51.768] [FATAL] default - TypeError: node-fetch cannot load localhost:8080/api/carrito/. URL scheme "localhost" is not supported.
+    at file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/node_modules/node-fetch/src/index.js:54:10
+    at new Promise (<anonymous>)
+    at fetch (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/node_modules/node-fetch/src/index.js:49:9)
+    at UsuarioDaoMongoDb.save (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/DAOs/Usuarios/UsuarioDaoMongoDb.js:18:36)
+    at Strategy._verify (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/Middleware/passport.js:17:40)
+    at Strategy.authenticate (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\passport-local\lib\strategy.js:88:12)
+    at attempt (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\passport\lib\middleware\authenticate.js:369:16)
+    at authenticate (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\passport\lib\middleware\authenticate.js:370:7)
+    at Layer.handle [as handle_request] (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\express\lib\router\route.js:144:13)
+[2022-08-16T18:14:51.774] [FATAL] default - ATENCION: A ocurrido un error sin manejo especifico. 
+	 TypeError: node-fetch cannot load localhost:8080/api/carrito/. URL scheme "localhost" is not supported.
+    at file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/node_modules/node-fetch/src/index.js:54:10
+    at new Promise (<anonymous>)
+    at fetch (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/node_modules/node-fetch/src/index.js:49:9)
+    at UsuarioDaoMongoDb.save (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/DAOs/Usuarios/UsuarioDaoMongoDb.js:18:36)
+    at Strategy._verify (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/Middleware/passport.js:17:40)
+    at Strategy.authenticate (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\passport-local\lib\strategy.js:88:12)
+    at attempt (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\passport\lib\middleware\authenticate.js:369:16)
+    at authenticate (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\passport\lib\middleware\authenticate.js:370:7)
+    at Layer.handle [as handle_request] (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\express\lib\router\route.js:144:13) 
+[2022-08-16T19:15:30.143] [FATAL] default - TypeError: node-fetch cannot load localhost:8080/api/carrito/. URL scheme "localhost" is not supported.
+    at file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/node_modules/node-fetch/src/index.js:54:10
+    at new Promise (<anonymous>)
+    at fetch (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/node_modules/node-fetch/src/index.js:49:9)
+    at UsuarioDaoMongoDb.save (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/DAOs/Usuarios/UsuarioDaoMongoDb.js:18:36)
+    at Strategy._verify (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/Middleware/passport.js:17:40)
+    at Strategy.authenticate (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\passport-local\lib\strategy.js:88:12)
+    at attempt (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\passport\lib\middleware\authenticate.js:369:16)
+    at authenticate (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\passport\lib\middleware\authenticate.js:370:7)
+    at Layer.handle [as handle_request] (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\express\lib\router\route.js:144:13)
+[2022-08-16T19:15:30.149] [FATAL] default - ATENCION: A ocurrido un error sin manejo especifico. 
+	 TypeError: node-fetch cannot load localhost:8080/api/carrito/. URL scheme "localhost" is not supported.
+    at file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/node_modules/node-fetch/src/index.js:54:10
+    at new Promise (<anonymous>)
+    at fetch (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/node_modules/node-fetch/src/index.js:49:9)
+    at UsuarioDaoMongoDb.save (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/DAOs/Usuarios/UsuarioDaoMongoDb.js:18:36)
+    at Strategy._verify (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/Middleware/passport.js:17:40)
+    at Strategy.authenticate (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\passport-local\lib\strategy.js:88:12)
+    at attempt (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\passport\lib\middleware\authenticate.js:369:16)
+    at authenticate (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\passport\lib\middleware\authenticate.js:370:7)
+    at Layer.handle [as handle_request] (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\express\lib\router\route.js:144:13) 
+[2022-08-16T19:18:14.789] [ERROR] default - Error: El elemento con id 62fc1718124a9a90031cd594 no fue encotrado
+    at crearError (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/Tools/Error_Generator.js:32:19)
+    at UsuarioDaoMongoDb.getByID (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/Class/Class_Mongo.js:192:23)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async UsuarioDaoMongoDb.getByID (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/DAOs/Usuarios/UsuarioDaoMongoDb.js:53:33)
+    at async file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/Middleware/passport.js:54:22 {
+  tipo: 'NOT_FOUND'
+}
+[2022-08-16T19:18:14.795] [ERROR] default - NOT_FOUND: El elemento con id 62fc1718124a9a90031cd594 no fue encotrado
+[2022-08-16T19:38:16.207] [ERROR] default - Error: El elemento con id 62fc1bb974ef028d80dd8eff no fue encotrado
+    at crearError (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/Tools/Error_Generator.js:32:19)
+    at UsuarioDaoMongoDb.getByID (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/Class/Class_Mongo.js:192:23)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async UsuarioDaoMongoDb.getByID (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/DAOs/Usuarios/UsuarioDaoMongoDb.js:53:33)
+    at async file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/Middleware/passport.js:54:22 {
+  tipo: 'NOT_FOUND'
+}
+[2022-08-16T19:38:16.213] [ERROR] default - NOT_FOUND: El elemento con id 62fc1bb974ef028d80dd8eff no fue encotrado
+[2022-08-16T19:39:51.442] [ERROR] default - Error: Usuario ya regitrado
+    at crearError (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/Tools/Error_Generator.js:32:19)
+    at UsuarioDaoMongoDb.save (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/Class/Class_Mongo.js:53:31)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async UsuarioDaoMongoDb.save (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/DAOs/Usuarios/UsuarioDaoMongoDb.js:20:29)
+    at async Strategy._verify (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/Middleware/passport.js:17:26) {
+  tipo: 'DUPLICATED_USER'
+}
+[2022-08-16T19:40:33.041] [ERROR] default - Error: Usuario ya regitrado
+    at crearError (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/Tools/Error_Generator.js:32:19)
+    at UsuarioDaoMongoDb.save (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/Class/Class_Mongo.js:53:31)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async UsuarioDaoMongoDb.save (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/DAOs/Usuarios/UsuarioDaoMongoDb.js:20:29)
+    at async Strategy._verify (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/Middleware/passport.js:17:26) {
+  tipo: 'DUPLICATED_USER'
+}
+[2022-08-16T19:41:09.527] [ERROR] default - Error: Usuario ya regitrado
+    at crearError (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/Tools/Error_Generator.js:32:19)
+    at UsuarioDaoMongoDb.save (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/Class/Class_Mongo.js:53:31)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async UsuarioDaoMongoDb.save (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/DAOs/Usuarios/UsuarioDaoMongoDb.js:20:29)
+    at async Strategy._verify (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/Middleware/passport.js:17:26) {
+  tipo: 'DUPLICATED_USER'
+}

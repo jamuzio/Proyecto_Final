@@ -1,4 +1,5 @@
 import { MongoClient } from 'mongodb'
+import logger from "../Tools/logger.js"
 
 const MONGOATLAS = process.env.MONGOATLAS
 
@@ -18,7 +19,7 @@ try{
     dbCoderhouse = client.db("CoderHouse")
 }
 catch(error){
-    console.log(error)
+    logger.fatal(`A ocurrido un error al iniciar la base: \n\t ${error.stack}`)
     throw error
 }
 export default dbCoderhouse
