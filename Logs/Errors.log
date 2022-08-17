@@ -431,3 +431,11 @@
     at async Strategy._verify (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/Middleware/passport.js:36:26) {
   tipo: 'AUTHE_ERROR'
 }
+[2022-08-17T11:15:55.315] [ERROR] default - Error: Usuario ya regitrado
+    at crearError (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/Tools/Error_Generator.js:32:19)
+    at UsuarioDaoMongoDb.save (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/Class/Class_Mongo.js:53:31)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async UsuarioDaoMongoDb.save (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/DAOs/Usuarios/UsuarioDaoMongoDb.js:19:29)
+    at async Strategy._verify (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/Middleware/passport.js:19:26) {
+  tipo: 'DUPLICATED_USER'
+}

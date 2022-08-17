@@ -3,8 +3,10 @@ import { Strategy } from 'passport-local'
 import UsuarioDaoMongoDb from '../DAOs/Usuarios/UsuarioDaoMongoDb.js'
 //import crearError from '../Tools/Error_Generator.js'
 import logger from '../Tools/logger.js'
+import NotificationController from '../Controllers/NotificationController.js'
 
 const usuario = new UsuarioDaoMongoDb()
+const Notif_Email = process.env.Notif_Email
 
 passport.use('registro', new Strategy({
     passReqToCallback: true,
@@ -15,6 +17,7 @@ passport.use('registro', new Strategy({
         try {
             const datosUsuario = req.body
             const user = await usuario.save(datosUsuario)
+            NotificationController.SendMail(EmailMaker(user.EMAIL), Notif_Email, 'Nuevo Usuario Regitrado' )
             done(null, user)
         } catch (error) {
             if (error.tipo === 'DUPLICATED_USER' || error.tipo === 'MISSING_DATA' ){
@@ -61,3 +64,11 @@ passport.deserializeUser( async (ID, done) => {
 
 export const passportSessionHandler = passport.session()
 
+function EmailMaker(userEmail){
+    return `<div style= "background-color: rgb(235, 237, 239);">
+    <h1 style="color: rgb(44, 62, 80);">
+    Se a regitrado un nuevo usuario con el e-mail:
+    </h1>
+    <h2 style="color: rgb(211, 84, 0);">${userEmail}</h2>
+    </div>`
+}

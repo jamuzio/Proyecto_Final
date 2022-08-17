@@ -55,3 +55,5 @@
 [2022-08-16T21:12:54.966] [INFO] default - Se agrego el producto 62ae055972479b3c5d3fa270 al carrito 62fc1d44c3948312ac8d34e5
 [2022-08-16T21:21:46.363] [WARN] default - Ruta /api/carrito/productos/ con el metodo DELETE no implementada!
 [2022-08-16T21:22:17.250] [INFO] default - El carrito 62fc1d44c3948312ac8d34e5 se a vaciado con exito
+[2022-08-17T11:15:55.209] [INFO] default - Se a creado un nuevo carrito con id: 62fcf81b497ff47c17d76b0d
+[2022-08-17T11:16:57.609] [INFO] default - Se a creado un nuevo carrito con id: 62fcf859497ff47c17d76b0e
