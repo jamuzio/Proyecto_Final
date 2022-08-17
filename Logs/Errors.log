@@ -420,3 +420,14 @@
     at async Strategy._verify (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/Middleware/passport.js:17:26) {
   tipo: 'DUPLICATED_USER'
 }
+[2022-08-16T21:11:19.952] [FATAL] default - ATENCION: A ocurrido un error sin manejo especifico. 
+	 Error: Unable to find the session to touch
+    at D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\connect-mongo\build\main\lib\MongoStore.js:326:37
+    at processTicksAndRejections (node:internal/process/task_queues:96:5) 
+[2022-08-16T21:12:20.068] [ERROR] default - Error: Error de Autenticacion, credenciales no validas
+    at crearError (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/Tools/Error_Generator.js:32:19)
+    at UsuarioDaoMongoDb.autenticar (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/DAOs/Usuarios/UsuarioDaoMongoDb.js:38:23)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async Strategy._verify (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/Middleware/passport.js:36:26) {
+  tipo: 'AUTHE_ERROR'
+}

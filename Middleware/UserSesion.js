@@ -2,10 +2,13 @@ import UsuarioDaoMongoDb from "../DAOs/Usuarios/UsuarioDaoMongoDb.js"
 
 const usuario = new UsuarioDaoMongoDb()
 
-export const UserHasSesion = (req, res, next) => {
+export const UserHasSesion = async (req, res, next) => {
     //console.log(req)
     if (req.isAuthenticated()) {
         req.session.cookie.originalMaxAge
+        const id = req.session.passport.user
+        const user = await usuario.getByID(id)
+        req.params.id = user.CARRITO
         next()
     } else{
         res.status(403).json({ERROR: 'Usted no a iniciado session.'})

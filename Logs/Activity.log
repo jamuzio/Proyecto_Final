@@ -48,3 +48,10 @@
 [2022-08-16T19:40:32.915] [INFO] default - Se a creado un nuevo carrito con id: 62fc1ce0995564a2b501bf70
 [2022-08-16T19:41:09.446] [INFO] default - Se a creado un nuevo carrito con id: 62fc1d0584286228f3be9b78
 [2022-08-16T19:42:12.944] [INFO] default - Se a creado un nuevo carrito con id: 62fc1d44c3948312ac8d34e5
+[2022-08-16T21:10:30.578] [WARN] default - Ruta /api/carrito/productos/62ae055972479b3c5d3fa270 con el metodo POST no implementada!
+[2022-08-16T21:10:53.437] [INFO] default - Se agrego el producto 62ae055972479b3c5d3fa270 al carrito 62fc1718124a9a90031cd593
+[2022-08-16T21:11:14.628] [WARN] default - Ruta /api/session/logout con el metodo POST no implementada!
+[2022-08-16T21:11:20.052] [WARN] default - Ruta /login con el metodo GET no implementada!
+[2022-08-16T21:12:54.966] [INFO] default - Se agrego el producto 62ae055972479b3c5d3fa270 al carrito 62fc1d44c3948312ac8d34e5
+[2022-08-16T21:21:46.363] [WARN] default - Ruta /api/carrito/productos/ con el metodo DELETE no implementada!
+[2022-08-16T21:22:17.250] [INFO] default - El carrito 62fc1d44c3948312ac8d34e5 se a vaciado con exito
