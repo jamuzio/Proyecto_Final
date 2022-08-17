@@ -2,6 +2,7 @@ import Class_Mongo from "../../Class/Class_Mongo.js"
 import bCrypt from "bcrypt"
 import crearError from "../../Tools/Error_Generator.js"
 import { FuncionsCarrito } from "../../Controllers/ControladorCarrito.js"
+import { ObjectId } from "mongodb"
 
 class UsuarioDaoMongoDb extends Class_Mongo {
 
@@ -54,6 +55,28 @@ class UsuarioDaoMongoDb extends Class_Mongo {
         ElementoBuscado.ID = ElementoBuscado._id.toString()
         return ElementoBuscado
     }
+    
+    async ChangeUserlROL(UserId, NewROL){
+        try{
+            if(UserId.length != 24){
+                throw crearError('MISSING_DATA', 'El id debe contener 24 caracteres')
+            }
+            const MongoID = ObjectId(UserId)
+            const resultado = await this.coleccion.findOneAndUpdate({_id: MongoID}, 
+                {$set: {
+                    ROL: NewROL
+                }
+            })
+            if(!resultado){
+                throw crearError('NOT_FOUND', `El usuario con id ${id} no fue encotrado`)
+            }
+        }
+        catch(error){
+            throw error
+        }
+
+        }
+
 }
 
 export default UsuarioDaoMongoDb

@@ -57,3 +57,11 @@
 [2022-08-16T21:22:17.250] [INFO] default - El carrito 62fc1d44c3948312ac8d34e5 se a vaciado con exito
 [2022-08-17T11:15:55.209] [INFO] default - Se a creado un nuevo carrito con id: 62fcf81b497ff47c17d76b0d
 [2022-08-17T11:16:57.609] [INFO] default - Se a creado un nuevo carrito con id: 62fcf859497ff47c17d76b0e
+[2022-08-17T12:33:04.523] [WARN] default - Ruta /api/session/ChangeUserRol con el metodo GET no implementada!
+[2022-08-17T12:33:53.209] [WARN] default - Ruta /api/session/logout con el metodo POST no implementada!
+[2022-08-17T12:33:59.022] [WARN] default - Ruta /login con el metodo GET no implementada!
+[2022-08-17T12:35:29.637] [INFO] default - Usaurio 62fb0186c11fa58d8cfab840 cambio los privilegios del usuairo 62fc1d45c3948312ac8d34e6 a admin
+[2022-08-17T12:39:18.847] [INFO] default - Usaurio 62fb0186c11fa58d8cfab840 cambio los privilegios del usuairo 62fc1d45c3948312ac8d34e6 a admin
+[2022-08-17T12:40:29.208] [INFO] default - Usaurio 62fb0186c11fa58d8cfab840 cambio los privilegios del usuairo 62fc1d45c3948312ac8d34e6 a costumer
+[2022-08-17T12:49:13.020] [WARN] default - Ruta /api/session/login con el metodo POST no implementada!
+[2022-08-17T12:49:25.379] [WARN] default - Ruta /api/session/login con el metodo POST no implementada!

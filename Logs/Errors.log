@@ -439,3 +439,39 @@
     at async Strategy._verify (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/Middleware/passport.js:19:26) {
   tipo: 'DUPLICATED_USER'
 }
+[2022-08-17T12:33:59.027] [FATAL] default - ATENCION: A ocurrido un error sin manejo especifico. 
+	 Error: Unable to find the session to touch
+    at D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\connect-mongo\build\main\lib\MongoStore.js:326:37
+    at processTicksAndRejections (node:internal/process/task_queues:96:5) 
+[2022-08-17T12:34:41.131] [FATAL] default - ATENCION: A ocurrido un error sin manejo especifico. 
+	 ReferenceError: id is not defined
+    at UsuarioDaoMongoDb.ChangeUserlROL (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/DAOs/Usuarios/UsuarioDaoMongoDb.js:61:13)
+    at ChangeUserRol (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/Controllers/UserController.js:25:27)
+    at Layer.handle [as handle_request] (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\express\lib\router\route.js:144:13)
+    at AdminCheck (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/Middleware/UserSesion.js:23:13)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5) 
+[2022-08-17T12:48:47.978] [FATAL] default - ATENCION: A ocurrido un error sin manejo especifico. 
+	 ReferenceError: user is not defined
+    at success (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/Routers/routerSessions.js:18:17)
+    at Layer.handle [as handle_request] (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\express\lib\router\route.js:144:13)
+    at complete (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\passport\lib\middleware\authenticate.js:271:13)
+    at D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\passport\lib\middleware\authenticate.js:278:15
+    at pass (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\passport\lib\authenticator.js:428:14)
+    at Authenticator.transformAuthInfo (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\passport\lib\authenticator.js:450:5)
+    at D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\passport\lib\middleware\authenticate.js:275:22
+    at D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\passport\lib\http\request.js:41:7
+    at D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\passport\lib\sessionmanager.js:51:9 
+[2022-08-17T12:56:05.289] [FATAL] default - ATENCION: A ocurrido un error sin manejo especifico. 
+	 TypeError: Cannot read properties of undefined (reading 'EMAIL')
+    at successLogin (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/Routers/routerSessions.js:18:73)
+    at Layer.handle [as handle_request] (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\express\lib\router\route.js:144:13)
+    at complete (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\passport\lib\middleware\authenticate.js:271:13)
+    at D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\passport\lib\middleware\authenticate.js:278:15
+    at pass (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\passport\lib\authenticator.js:428:14)
+    at Authenticator.transformAuthInfo (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\passport\lib\authenticator.js:450:5)
+    at D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\passport\lib\middleware\authenticate.js:275:22
+    at D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\passport\lib\http\request.js:41:7
+    at D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\passport\lib\sessionmanager.js:51:9 
