@@ -1,10 +1,9 @@
 import passport from 'passport'
 import { Strategy } from 'passport-local'
-import UsuarioDaoMongoDb from '../DAOs/Usuarios/UsuarioDaoMongoDb.js'
+import { usuario } from '../Controllers/UserController.js'
 import logger from '../Tools/logger.js'
 import NotificationController from '../Controllers/NotificationController.js'
 
-const usuario = new UsuarioDaoMongoDb()
 const Notif_Email = process.env.Notif_Email
 
 passport.use('registro', new Strategy({

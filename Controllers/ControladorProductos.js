@@ -93,6 +93,14 @@ const ProdFuncionCtrl = {
         } catch (error) {
             throw error
         }
+    },
+    DecreseStock: async (id) => {
+        try {
+            const ProductoBuscado = await ProductosDao.changeStock(id, -1);
+            return ProductoBuscado
+        } catch (error) {
+            throw error
+        }
     }
 }
 

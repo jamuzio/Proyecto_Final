@@ -65,3 +65,4 @@
 [2022-08-17T12:40:29.208] [INFO] default - Usaurio 62fb0186c11fa58d8cfab840 cambio los privilegios del usuairo 62fc1d45c3948312ac8d34e6 a costumer
 [2022-08-17T12:49:13.020] [WARN] default - Ruta /api/session/login con el metodo POST no implementada!
 [2022-08-17T12:49:25.379] [WARN] default - Ruta /api/session/login con el metodo POST no implementada!
+[2022-08-17T17:34:35.883] [WARN] default - Ruta /api/carrito/ con el metodo GET no implementada!

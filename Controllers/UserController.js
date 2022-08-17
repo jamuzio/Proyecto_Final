@@ -38,7 +38,7 @@ const UserController = {
 
 }
 
-export default UserController
+export {UserController, usuario}
 
 
 

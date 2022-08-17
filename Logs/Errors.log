@@ -475,3 +475,19 @@
     at D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\passport\lib\middleware\authenticate.js:275:22
     at D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\passport\lib\http\request.js:41:7
     at D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\passport\lib\sessionmanager.js:51:9 
+[2022-08-17T17:34:56.045] [FATAL] default - ATENCION: A ocurrido un error sin manejo especifico. 
+	 ReferenceError: ObjectId is not defined
+    at ProductosDaoMongoDb.changeStock (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/DAOs/Productos/ProductosDaoMongoDb.js:22:29)
+    at Object.DecreseStock (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/Controllers/ControladorProductos.js:99:56)
+    at BuyChopCart (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/Controllers/ControladorCarrito.js:76:61)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5) 
+[2022-08-17T17:36:54.877] [FATAL] default - ATENCION: A ocurrido un error sin manejo especifico. 
+	 Error: Permission to send an SMS has not been enabled for the region indicated by the 'To' number: 3512647826.
+    at success (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\twilio\lib\base\Version.js:135:15)
+    at Promise_then_fulfilled (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\q\q.js:766:44)
+    at Promise_done_fulfilled (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\q\q.js:835:31)
+    at Fulfilled_dispatch [as dispatch] (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\q\q.js:1229:9)
+    at Pending_become_eachMessage_task (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\q\q.js:1369:30)
+    at RawTask.call (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\asap\asap.js:40:19)
+    at flush (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\asap\raw.js:50:29)
+    at processTicksAndRejections (node:internal/process/task_queues:78:11) 
