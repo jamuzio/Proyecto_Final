@@ -89,3 +89,4 @@
 [2022-08-17T21:29:31.912] [INFO] default - Se agrego el producto 62fd84828bd6bab6a011730c al carrito 62fc1718124a9a90031cd593
 [2022-08-17T21:29:54.015] [INFO] default - Se agrego el producto 62fd84828bd6bab6a011730c al carrito 62fc1718124a9a90031cd593
 [2022-08-17T21:31:53.345] [WARN] default - Ruta /api/carrito/productos/comprar con el metodo GET no implementada!
+[2022-08-17T21:59:48.494] [INFO] default - El carrito 62fc1718124a9a90031cd593 se a vaciado con exito
