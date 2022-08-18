@@ -17,6 +17,7 @@ class UsuarioDaoMongoDb extends Class_Mongo {
             datos.PWD = createHash(datos.PWD)
             datos.ROL = 'customer'
             datos.CARR = await FuncionsCarrito.CreateNew()
+            datos.FOTO = 'No_Profile_Image.jpg'
             const newuser = await super.save(datos, 'Usuario')
             return {EMAIL:newuser.EMAIL, ID:newuser.ID}
         }
@@ -75,6 +76,26 @@ class UsuarioDaoMongoDb extends Class_Mongo {
             throw error
         }
 
+    }
+    async ChangeUserImage(UserId, extension){
+        try{
+            if(UserId.length != 24){
+                throw crearError('MISSING_DATA', 'El id debe contener 24 caracteres')
+            }
+            const MongoID = ObjectId(UserId)
+            const resultado = await this.coleccion.findOneAndUpdate({_id: MongoID}, 
+                {$set: {
+                    FOTO: `${UserId}.${extension}`
+                }
+            })
+            if(!resultado){
+                throw crearError('NOT_FOUND', `El usuario con id ${id} no fue encotrado`)
+            }
+        }
+        catch(error){
+            throw error
+        }
+
         }
 
 }
@@ -94,12 +115,6 @@ function ValidUser(datos){
         datos.EDAD?.length === 0 ||
         datos.TELEFONO?.length === 0
         ){
-            console.log(datos.EMAIL?.length)
-            console.log(!emailRegex.test(datos.EMAIL))
-            console.log(datos.PWD?.length)
-            console.log(datos.DIRECCION?.length)
-            console.log(datos.EDAD?.length)
-            console.log(datos.TELEFONO?.length)
         return false
     } else{
         return true

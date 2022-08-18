@@ -491,3 +491,30 @@
     at RawTask.call (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\asap\asap.js:40:19)
     at flush (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\asap\raw.js:50:29)
     at processTicksAndRejections (node:internal/process/task_queues:78:11) 
+[2022-08-17T20:42:31.557] [FATAL] default - ATENCION: A ocurrido un error sin manejo especifico. 
+	 SyntaxError: Unexpected token } in JSON at position 188
+    at JSON.parse (<anonymous>)
+    at parse (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\body-parser\lib\types\json.js:89:19)
+    at D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\body-parser\lib\read.js:128:18
+    at AsyncResource.runInAsyncScope (node:async_hooks:199:9)
+    at invokeCallback (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\raw-body\index.js:231:16)
+    at done (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\raw-body\index.js:220:7)
+    at IncomingMessage.onEnd (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\raw-body\index.js:280:7)
+    at IncomingMessage.emit (node:events:402:35)
+    at endReadableNT (node:internal/streams/readable:1343:12)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21) 
+[2022-08-17T21:20:23.834] [ERROR] default - NOT_FOUND: El producto con id 62fd84828bd6bab6a011730c no se encuntra en el carrito
+[2022-08-17T21:24:12.278] [FATAL] default - ATENCION: A ocurrido un error sin manejo especifico. 
+	 SyntaxError: Unexpected token + in JSON at position 176
+    at JSON.parse (<anonymous>)
+    at parse (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\body-parser\lib\types\json.js:89:19)
+    at D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\body-parser\lib\read.js:128:18
+    at AsyncResource.runInAsyncScope (node:async_hooks:199:9)
+    at invokeCallback (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\raw-body\index.js:231:16)
+    at done (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\raw-body\index.js:220:7)
+    at IncomingMessage.onEnd (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\raw-body\index.js:280:7)
+    at IncomingMessage.emit (node:events:402:35)
+    at endReadableNT (node:internal/streams/readable:1343:12)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21) 
+[2022-08-17T21:29:41.693] [ERROR] default - MISSING_DATA: El id debe contener 24 caracteres
+[2022-08-17T21:30:25.907] [ERROR] default - NOT_FOUND: El elemento con id 62fd84828bd6bab6a011780c no fue encotrado

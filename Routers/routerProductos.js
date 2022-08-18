@@ -6,7 +6,7 @@ import { AdminCheck } from '../Middleware/UserSesion.js'
 
 const routerProductos = new Router()
 
-routerProductos.get('/',AdminCheck, ControladorProductos.AllProd)
+routerProductos.get('/', ControladorProductos.AllProd)
 routerProductos.get('/:id', ControladorProductos.ProdByID)
 routerProductos.post('/', AdminCheck, ControladorProductos.AddNewProd)
 routerProductos.put('/:id', AdminCheck, ControladorProductos.UpdateProd)

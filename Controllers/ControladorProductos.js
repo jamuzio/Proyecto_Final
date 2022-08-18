@@ -25,7 +25,7 @@ const ControladorProductos = {
             } else {
                 throw crearError('MISSING_DATA')
             }
-            logger.info(`Se creo el producto ${NewProduct}`)
+            logger.info(`Se creo el producto ${NewProduct.ID}`)
             res.status(201).json(NewProduct)
         } catch (error) {
             next(error)

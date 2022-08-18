@@ -66,3 +66,26 @@
 [2022-08-17T12:49:13.020] [WARN] default - Ruta /api/session/login con el metodo POST no implementada!
 [2022-08-17T12:49:25.379] [WARN] default - Ruta /api/session/login con el metodo POST no implementada!
 [2022-08-17T17:34:35.883] [WARN] default - Ruta /api/carrito/ con el metodo GET no implementada!
+[2022-08-17T19:16:39.079] [WARN] default - Ruta / con el metodo GET no implementada!
+[2022-08-17T19:16:39.239] [WARN] default - Ruta /favicon.ico con el metodo GET no implementada!
+[2022-08-17T19:16:53.889] [WARN] default - Ruta /index.html con el metodo GET no implementada!
+[2022-08-17T19:18:56.186] [WARN] default - Ruta / con el metodo POST no implementada!
+[2022-08-17T20:41:17.817] [WARN] default - Ruta /api/upload/ProfileImage con el metodo GET no implementada!
+[2022-08-17T20:42:40.533] [INFO] default - Se a creado un nuevo carrito con id: 62fd7cf08bd6bab6a011730a
+[2022-08-17T21:14:58.944] [INFO] default - Se creo el producto [object Object]
+[2022-08-17T21:18:22.039] [INFO] default - Se agrego el producto 62ae055972479b3c5d3fa270 al carrito 62fc1718124a9a90031cd593
+[2022-08-17T21:18:31.650] [INFO] default - Se agrego el producto 62fd84828bd6bab6a011730c al carrito 62fc1718124a9a90031cd593
+[2022-08-17T21:18:34.896] [INFO] default - Se agrego el producto 62fd84828bd6bab6a011730c al carrito 62fc1718124a9a90031cd593
+[2022-08-17T21:20:19.104] [INFO] default - Se quitó el producto 62fd84828bd6bab6a011730c al carrito 62fc1718124a9a90031cd593
+[2022-08-17T21:20:22.271] [INFO] default - Se quitó el producto 62fd84828bd6bab6a011730c al carrito 62fc1718124a9a90031cd593
+[2022-08-17T21:20:29.988] [INFO] default - Se agrego el producto 62fd84828bd6bab6a011730c al carrito 62fc1718124a9a90031cd593
+[2022-08-17T21:20:31.198] [INFO] default - Se agrego el producto 62fd84828bd6bab6a011730c al carrito 62fc1718124a9a90031cd593
+[2022-08-17T21:22:23.330] [INFO] default - El carrito 62fc1718124a9a90031cd593 se a vaciado con exito
+[2022-08-17T21:24:26.172] [INFO] default - Se a creado un nuevo carrito con id: 62fd86ba8bd6bab6a011730d
+[2022-08-17T21:25:05.836] [INFO] default - Se agrego el producto 62fd84828bd6bab6a011730c al carrito 62fd86ba8bd6bab6a011730d
+[2022-08-17T21:25:07.722] [INFO] default - Se agrego el producto 62fd84828bd6bab6a011730c al carrito 62fd86ba8bd6bab6a011730d
+[2022-08-17T21:27:51.713] [INFO] default - Se agrego el producto 62ae055972479b3c5d3fa270 al carrito 62fc1718124a9a90031cd593
+[2022-08-17T21:28:50.544] [INFO] default - Se agrego el producto 62ae055972479b3c5d3fa270 al carrito 62fc1718124a9a90031cd593
+[2022-08-17T21:29:31.912] [INFO] default - Se agrego el producto 62fd84828bd6bab6a011730c al carrito 62fc1718124a9a90031cd593
+[2022-08-17T21:29:54.015] [INFO] default - Se agrego el producto 62fd84828bd6bab6a011730c al carrito 62fc1718124a9a90031cd593
+[2022-08-17T21:31:53.345] [WARN] default - Ruta /api/carrito/productos/comprar con el metodo GET no implementada!
