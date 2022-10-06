@@ -1,8 +1,8 @@
 import '../Env/dotenv_config.js'
 import express from 'express'
 import errorHandler from '../Middleware/Error_Handler.js'
-import { passportMiddleware, passportSessionHandler } from '../Middleware/passport.js'
-import session from '../Middleware/Session.js'
+//import { passportMiddleware, passportSessionHandler } from '../Middleware/passport.js'
+//import session from '../Middleware/Session.js'
 import Server_Router from '../Routers/Sever_Router.js'
 
 const app = express()
@@ -12,9 +12,9 @@ app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 app.use(express.static('Public'))
 
-app.use(session)
-app.use(passportMiddleware)
-app.use(passportSessionHandler)
+//app.use(session)
+//app.use(passportMiddleware)
+//app.use(passportSessionHandler)
 
 app.use(Server_Router)
 

@@ -1,59 +1,52 @@
-import { ProductosDao } from '../DAOs/Productos/index.js'
-import crearError from '../Tools/Error_Generator.js'
-import logger from '../Tools/logger.js'
+import Api_Prod from "../APIs/API_Productos.js"
 
 
 const ControladorProductos = {
     AllProd: async (req, res, next) => {
-        let AllProd = await ProductosDao.getAll()
-        res.send(AllProd)
+        try {
+            const AllProd = await Api_Prod.allProducts()
+            res.json(AllProd)
+        } catch (error) {
+            next(error)
+        }
     },
     ProdByID: async (req, res, next) => {
         const id = req.params.id
         try {
-            const ProductoBuscado = await ProductosDao.getByID(id);
+            const ProductoBuscado = await Api_Prod.getProdById(id);
             res.json(ProductoBuscado)
         } catch (error) {
             next(error)
         }
     },
     AddNewProd: async (req, res, next) => {
-        let NewProduct = req.body
-        try {
-            if (itValidProd(NewProduct)){
-                   NewProduct =  await ProductosDao.save(NewProduct)
-            } else {
-                throw crearError('MISSING_DATA')
-            }
-            logger.info(`Se creo el producto ${NewProduct.ID}`)
-            res.status(201).json(NewProduct)
-        } catch (error) {
+        const NewProduct = req.body
+        try{
+            const ProductAdded = await Api_Prod.CreateNewProd(NewProduct)
+            res.status(201).json(ProductAdded)
+        }
+        catch(error) {
             next(error)
-
         }
     },
     UpdateProd: async (req, res, next) => {
         const id = req.params.id
         const UpdateData = req.body
+        
         try {
-            if (itValidProd(UpdateData)){
-                    await ProductosDao.update(id, UpdateData)
-            } else {
-                throw crearError('MISSING_DATA')
-            }
-            logger.info(`Se actualizó el producto ${id} con los datos: ${UpdateData}`)
-            res.status(202).json(UpdateData)
-        } catch (error) {
+            const updatedProd = await Api_Prod.UpdateProd(id, UpdateData);
+            console.log(updatedProd)
+            res.status(202).json(updatedProd)
+        } 
+        catch (error) {
             next(error)
-
         }
     },
     DeleteProdByID: async (req, res, next) => {
         const id = req.params.id
         try {
-            await ProductosDao.deleteById(id);
-            logger.info(`Se actualizó elimino producto ${id}`)
-            res.status(202).json('Producto Eliminado con exito')
+            await Api_Prod.deleteProdById(id);
+            res.status(204).json({Msg:'Producto Eliminado con exito', ProdID: id})
         } catch (error) {
             next(error)
         }
@@ -61,47 +54,4 @@ const ControladorProductos = {
 
 }
 
-function itValidProd(Dato){
-    if (Dato.hasOwnProperty("NOMBRE") && 
-        Dato.hasOwnProperty("DESCRIPCION") && 
-        Dato.hasOwnProperty("CODIGO") &&
-        Dato.hasOwnProperty("FOTO") &&
-        Dato.hasOwnProperty("PRECIO") &&
-        Dato.hasOwnProperty("STOCK")){
-            if(Dato.NOMBRE.length>0 && 
-            Dato.DESCRIPCION.length>0 && 
-            Dato.CODIGO.length>0 &&
-            Dato.FOTO.length>0){
-                if(Number(Dato.PRECIO) && Number(Dato.STOCK)){
-                    return true
-                } else{
-                    return false
-                } 
-            } else{
-                return false
-            }
-        } else{
-            return false
-        }
-    
-}
-const ProdFuncionCtrl = {
-    ProdByID: async (id) => {
-        try {
-            const ProductoBuscado = await ProductosDao.getByID(id);
-            return ProductoBuscado
-        } catch (error) {
-            throw error
-        }
-    },
-    DecreseStock: async (id) => {
-        try {
-            const ProductoBuscado = await ProductosDao.changeStock(id, -1);
-            return ProductoBuscado
-        } catch (error) {
-            throw error
-        }
-    }
-}
-
-export { ControladorProductos , ProdFuncionCtrl }
+export { ControladorProductos }

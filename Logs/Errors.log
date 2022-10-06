@@ -518,3 +518,130 @@
     at processTicksAndRejections (node:internal/process/task_queues:83:21) 
 [2022-08-17T21:29:41.693] [ERROR] default - MISSING_DATA: El id debe contener 24 caracteres
 [2022-08-17T21:30:25.907] [ERROR] default - NOT_FOUND: El elemento con id 62fd84828bd6bab6a011780c no fue encotrado
+[2022-10-05T12:47:49.796] [ERROR] default - MISSING_DATA: "Contraseña" es un campo requerido
+[2022-10-05T12:53:11.492] [FATAL] default - ATENCION: A ocurrido un error sin manejo especifico. 
+	 TypeError: Cannot add property _id, object is not extensible
+    at D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\mongodb\lib\operations\common_functions.js:65:21
+    at Array.map (<anonymous>)
+    at prepareDocs (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\mongodb\lib\operations\common_functions.js:63:17)
+    at new InsertOneOperation (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\mongodb\lib\operations\insert.js:42:74)
+    at Collection.insertOne (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\mongodb\lib\collection.js:149:78)
+    at UsuarioDaoMongoDb.save (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/Models/DB/Class_Mongo.js:11:41)
+    at UsuarioDaoMongoDb.save (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/Models/DAOs/Usuarios/UsuarioDaoMongoDb.js:11:25)
+    at UsuariosAPI.createNewUser (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/APIs/API_Usuarios.js:21:37)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async register (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/Controllers/UserController.js:21:29) 
+[2022-10-05T12:58:17.746] [ERROR] default - MISSING_DATA: "id" es un campo requerido
+[2022-10-05T13:04:03.817] [ERROR] default - MISSING_DATA: "id" es un campo requerido
+[2022-10-05T13:04:38.520] [ERROR] default - MISSING_DATA: "id" es un campo requerido
+[2022-10-05T13:06:36.497] [ERROR] default - DUPLICATED_USER: Usuario ya regitrado
+[2022-10-05T13:06:44.315] [ERROR] default - MISSING_DATA: "id" es un campo requerido para crear el carrito
+[2022-10-05T13:07:45.588] [ERROR] default - DUPLICATED_USER: Usuario ya regitrado
+[2022-10-05T13:07:56.275] [FATAL] default - ATENCION: A ocurrido un error sin manejo especifico. 
+	 MongoServerError: Write batch sizes must be between 1 and 100000. Got 0 operations.
+    at Connection.onMessage (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\mongodb\lib\cmap\connection.js:210:30)
+    at MessageStream.<anonymous> (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\mongodb\lib\cmap\connection.js:63:60)
+    at MessageStream.emit (node:events:390:28)
+    at processIncomingData (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\mongodb\lib\cmap\message_stream.js:132:20)
+    at MessageStream._write (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\mongodb\lib\cmap\message_stream.js:33:9)
+    at writeOrBuffer (node:internal/streams/writable:389:12)
+    at _write (node:internal/streams/writable:330:10)
+    at MessageStream.Writable.write (node:internal/streams/writable:334:10)
+    at Socket.ondata (node:internal/streams/readable:754:22)
+    at Socket.emit (node:events:390:28) 
+[2022-10-05T13:11:49.337] [FATAL] default - ATENCION: A ocurrido un error sin manejo especifico. 
+	 TypeError: Cannot add property _id, object is not extensible
+    at D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\mongodb\lib\operations\common_functions.js:65:21
+    at Array.map (<anonymous>)
+    at prepareDocs (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\mongodb\lib\operations\common_functions.js:63:17)
+    at new InsertOneOperation (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\mongodb\lib\operations\insert.js:42:74)
+    at Collection.insertOne (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\mongodb\lib\collection.js:149:78)
+    at CarritoDaoMongoDb.save (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/Models/DB/Class_Mongo.js:12:41)
+    at CarritoDaoMongoDb.create (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/Models/DAOs/Carrito/CarritoDaoMongoDb.js:10:27)
+    at CarritoAPI.CreateNew (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/APIs/API_Carrito.js:27:33)
+    at UsuariosAPI.createNewUser (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/APIs/API_Usuarios.js:22:35)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5) 
+[2022-10-05T13:15:10.332] [FATAL] default - ATENCION: A ocurrido un error sin manejo especifico. 
+	 TypeError: CarritoDao.getByID is not a function
+    at CarritoAPI.DisplayProd (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/APIs/API_Carrito.js:47:46)
+    at DisplayProd (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/Controllers/ControladorCarrito.js:30:54)
+    at Layer.handle [as handle_request] (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\express\lib\router\route.js:144:13)
+    at file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/Middleware/UserSesion.js:25:7
+    at D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\jsonwebtoken\verify.js:223:12
+    at getSecret (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\jsonwebtoken\verify.js:90:14)
+    at Object.module.exports [as verify] (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\jsonwebtoken\verify.js:94:10)
+    at UserHasSesion (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/Middleware/UserSesion.js:16:9)
+    at Layer.handle [as handle_request] (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\express\lib\router\layer.js:95:5) 
+[2022-10-05T14:29:32.388] [ERROR] default - MISSING_DATA: "Nombre"es un campo requerido
+[2022-10-05T14:30:55.648] [ERROR] default - MISSING_DATA: "Nombre"es un campo requerido
+[2022-10-05T14:37:21.762] [ERROR] default - MISSING_DATA: "NAME" es un campo requerido
+[2022-10-05T14:39:20.842] [ERROR] default - MISSING_DATA: "id" es un campo requerido
+[2022-10-05T14:39:40.112] [FATAL] default - ATENCION: A ocurrido un error sin manejo especifico. 
+	 Error: El nombre debe contener menos de 50 caracteres
+    at createError (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/Tools/Error_Generator.js:85:19)
+    at Object.WRONG_DATA (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/Tools/Error_Generator.js:72:16)
+    at Product.set name [as name] (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/Models/Class/Product.js:26:51)
+    at new Product (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/Models/Class/Product.js:12:17)
+    at ProductosApi.CreateNewProd (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/APIs/API_Productos.js:19:34)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async AddNewProd (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/Controllers/ControladorProductos.js:25:34) 
+[2022-10-05T15:01:17.502] [FATAL] default - ATENCION: A ocurrido un error sin manejo especifico. 
+	 ReferenceError: description is not defined
+    at new Product (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/Models/Class/Product.js:13:26)
+    at ProductosApi.CreateNewProd (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/APIs/API_Productos.js:19:34)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async AddNewProd (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/Controllers/ControladorProductos.js:25:34) 
+[2022-10-05T15:08:32.383] [FATAL] default - ATENCION: A ocurrido un error sin manejo especifico. 
+	 TypeError: Cannot add property _id, object is not extensible
+    at D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\mongodb\lib\operations\common_functions.js:65:21
+    at Array.map (<anonymous>)
+    at prepareDocs (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\mongodb\lib\operations\common_functions.js:63:17)
+    at new InsertOneOperation (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\mongodb\lib\operations\insert.js:42:74)
+    at Collection.insertOne (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\mongodb\lib\collection.js:149:78)
+    at ProductosDaoMongoDb.save (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/Models/DB/Class_Mongo.js:12:41)
+    at ProductosDaoMongoDb.save (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/Models/DAOs/Productos/ProductosDaoMongoDb.js:11:25)
+    at ProductosApi.CreateNewProd (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/APIs/API_Productos.js:20:38)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async AddNewProd (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/Controllers/ControladorProductos.js:25:34) 
+[2022-10-05T15:13:24.806] [ERROR] default - MISSING_DATA: "NAME" es un campo requerido
+[2022-10-05T15:13:43.541] [ERROR] default - NOT_FOUND: Recurso no encontrado
+[2022-10-05T15:29:38.952] [ERROR] default - MISSING_DATA: "id" es un campo requerido para crear el carrito
+[2022-10-05T15:38:47.064] [FATAL] default - ATENCION: A ocurrido un error sin manejo especifico. 
+	 ReferenceError: product is not defined
+    at ShopCart.addProduct (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/Models/Class/Carrito.js:33:18)
+    at CarritoAPI.AddProd (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/APIs/API_Carrito.js:37:21)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async AddProd (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/Controllers/ControladorCarrito.js:20:13) 
+[2022-10-05T15:41:32.227] [FATAL] default - ATENCION: A ocurrido un error sin manejo especifico. 
+	 ReferenceError: datosDeUsuario is not defined
+    at ProductosApi.UpdateProd (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/APIs/API_Productos.js:59:44)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async UpdateProd (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/Controllers/ControladorProductos.js:37:33) 
+[2022-10-05T15:52:26.476] [ERROR] default - MISSING_DATA: "id" es un campo requerido
+[2022-10-05T15:54:37.528] [FATAL] default - ATENCION: A ocurrido un error sin manejo especifico. 
+	 ReferenceError: productoBuscado is not defined
+    at ProductosDaoMongoDb.getById (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/Models/DAOs/Productos/ProductosDaoMongoDb.js:32:24)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async ProductosApi.UpdateProd (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/APIs/API_Productos.js:57:37)
+    at async UpdateProd (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/Controllers/ControladorProductos.js:37:33) 
+[2022-10-05T17:10:20.180] [ERROR] default - NOT_FOUND: Recurso no encontrado
+[2022-10-05T17:14:37.374] [ERROR] default - NOT_FOUND: Recurso no encontrado
+[2022-10-05T17:17:08.139] [ERROR] default - NOT_FOUND: Recurso no encontrado
+[2022-10-05T17:19:01.827] [FATAL] default - ATENCION: A ocurrido un error sin manejo especifico. 
+	 TypeError: carrito.PRODUCTS is not iterable
+    at CarritoAPI.DisplayProd (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/APIs/API_Carrito.js:49:42)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async DisplayProd (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/Controllers/ControladorCarrito.js:30:36) 
+[2022-10-05T17:23:13.546] [ERROR] default - DUPLICATED_PRODUCT: Producto Dupliacado
+[2022-10-05T17:24:25.405] [ERROR] default - DUPLICATED_PRODUCT: Producto Dupliacado
+[2022-10-05T17:25:39.727] [ERROR] default - MISSING_DATA: "Email" es un campo requerido
+[2022-10-05T17:27:40.344] [ERROR] default - DUPLICATED_PRODUCT: Producto Dupliacado
+[2022-10-05T17:29:52.764] [ERROR] default - AUTHE_ERROR: Error de Autenticacion, credenciales no validas
+[2022-10-05T17:30:25.911] [ERROR] default - DUPLICATED_PRODUCT: Producto Dupliacado
+[2022-10-05T17:31:50.641] [ERROR] default - DUPLICATED_PRODUCT: Producto Dupliacado
+[2022-10-05T17:34:02.797] [ERROR] default - DUPLICATED_PRODUCT: Producto Dupliacado
+[2022-10-05T17:35:46.832] [ERROR] default - DUPLICATED_PRODUCT: Producto Dupliacado
+[2022-10-05T17:36:52.398] [ERROR] default - DUPLICATED_PRODUCT: Producto Dupliacado
+[2022-10-05T17:43:35.062] [ERROR] default - MISSING_DATA: "id" es un campo requerido para crear el carrito
+[2022-10-05T21:42:20.577] [ERROR] default - NOT_FOUND: Recurso no encontrado

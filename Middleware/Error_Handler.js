@@ -3,6 +3,9 @@ import logger from "../Tools/logger.js"
 function errorHandler(error, req, res, next) {
     let KnowError = true
     switch (error.tipo) {
+        case "WRONG_DATA":
+        case "WRONG_TYPE":
+        case "MISSING_MESSAGE":
         case 'MISSING_DATA':
             res.status(400)
             break
@@ -16,10 +19,11 @@ function errorHandler(error, req, res, next) {
             res.status(404)
             break
         case 'DUPLICATED_PRODUCT':
-            res.status(409)
-            break
         case 'DUPLICATED_USER':
             res.status(409)
+            break
+        case "SESSION_TIMEOUT":
+            res.status(498)
             break
         default:
             KnowError = false
@@ -27,7 +31,7 @@ function errorHandler(error, req, res, next) {
     }
     if(KnowError){
         logger.error(`${error.tipo}: ${error.message}`)
-        res.json({ msj: error.message })
+        res.json({ msg: error.message })
     } else{
         logger.fatal(`ATENCION: A ocurrido un error sin manejo especifico. \n\t ${error.stack} `)
         res.json({ msj: "Error Interno del servidor" })

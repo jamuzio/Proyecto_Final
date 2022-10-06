@@ -9,10 +9,10 @@ import archivosRouter from './archivosRouter.js'
 
 const Server_Router = express()
 
-Server_Router.use('/api/productos', routerProductos)
-Server_Router.use('/api/session', routerSession)
-Server_Router.use('/api/carrito', routerCarrito)
+Server_Router.use('/api/products', routerProductos)
+Server_Router.use('/api/shoppingcartproducts', routerCarrito)
 Server_Router.use('/api/upload', archivosRouter)
+Server_Router.use('/', routerSession)
 Server_Router.all('*', (req, res) => {
     logger.warn(`Ruta ${req.url} con el metodo ${req.method} no implementada!`)
     res.status(404).json({ERROR: `Ruta ${req.url} con el metodo ${req.method} no implementada!`})

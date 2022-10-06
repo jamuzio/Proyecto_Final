@@ -90,3 +90,41 @@
 [2022-08-17T21:29:54.015] [INFO] default - Se agrego el producto 62fd84828bd6bab6a011730c al carrito 62fc1718124a9a90031cd593
 [2022-08-17T21:31:53.345] [WARN] default - Ruta /api/carrito/productos/comprar con el metodo GET no implementada!
 [2022-08-17T21:59:48.494] [INFO] default - El carrito 62fc1718124a9a90031cd593 se a vaciado con exito
+[2022-10-03T15:45:10.533] [WARN] default - Ruta /api/users con el metodo POST no implementada!
+[2022-10-05T14:34:59.924] [WARN] default - Ruta /api/products con el metodo POST no implementada!
+[2022-10-05T15:12:12.474] [INFO] default - Se agrego el producto undefined con el id: d1664rdfmbxax9r9353p2329
+[2022-10-05T15:40:07.187] [INFO] default - Se agrego el producto d1664rdfmbxax9r9353p2329 al carrito g166wlt49bn86r4rr07v41m1
+[2022-10-05T15:40:14.852] [INFO] default - Se agrego el producto d1664rdfmbxax9r9353p2329 al carrito g166wlt49bn86r4rr07v41m1
+[2022-10-05T15:40:23.088] [INFO] default - Se agrego el producto d1664rdfmbxax9r9353p2329 al carrito g166wlt49bn86r4rr07v41m1
+[2022-10-05T15:41:00.194] [INFO] default - Se quitó el producto d1664rdfmbxax9r9353p2329 al carrito g166wlt49bn86r4rr07v41m1
+[2022-10-05T15:41:09.283] [INFO] default - Se quitó el producto d1664rdfmbxax9r9353p2329 al carrito g166wlt49bn86r4rr07v41m1
+[2022-10-05T15:41:19.094] [INFO] default - Se quitó el producto d1664rdfmbxax9r9353p2329 al carrito g166wlt49bn86r4rr07v41m1
+[2022-10-05T15:55:13.173] [INFO] default - Se actualizo el producto id: d1664rdfmbxax9r9353p2329 con los datos [object Object]
+[2022-10-05T15:57:09.131] [INFO] default - Se actualizo el producto id: d1664rdfmbxax9r9353p2329 con los datos [object Object]
+[2022-10-05T17:09:16.106] [INFO] default - Se agrego el producto undefined con el id: j16a6wy5vhi00m05iz560d97
+[2022-10-05T17:18:15.073] [INFO] default - Se agrego el producto j16a6wy5vhi00m05iz560d97 al carrito l1r6650tl00yd49ugq7b25j5
+[2022-10-05T17:18:16.991] [INFO] default - Se agrego el producto j16a6wy5vhi00m05iz560d97 al carrito l1r6650tl00yd49ugq7b25j5
+[2022-10-05T17:18:18.156] [INFO] default - Se agrego el producto j16a6wy5vhi00m05iz560d97 al carrito l1r6650tl00yd49ugq7b25j5
+[2022-10-05T17:18:31.824] [INFO] default - Se agrego el producto j16a6wy5vhi00m05iz560d97 al carrito l1r6650tl00yd49ugq7b25j5
+[2022-10-05T17:21:22.060] [INFO] default - Se agrego el producto j16a6wy5vhi00m05iz560d97 al carrito l1r6650tl00yd49ugq7b25j5
+[2022-10-05T17:21:26.393] [INFO] default - Se agrego el producto j16a6wy5vhi00m05iz560d97 al carrito l1r6650tl00yd49ugq7b25j5
+[2022-10-05T17:21:27.500] [INFO] default - Se agrego el producto j16a6wy5vhi00m05iz560d97 al carrito l1r6650tl00yd49ugq7b25j5
+[2022-10-05T17:21:28.418] [INFO] default - Se agrego el producto j16a6wy5vhi00m05iz560d97 al carrito l1r6650tl00yd49ugq7b25j5
+[2022-10-05T17:21:43.224] [INFO] default - Se quitó el producto j16a6wy5vhi00m05iz560d97 al carrito l1r6650tl00yd49ugq7b25j5
+[2022-10-05T17:22:43.868] [INFO] default - Se actualizo el producto id: j16a6wy5vhi00m05iz560d97 con los datos [object Object]
+[2022-10-05T17:22:58.611] [INFO] default - Se agrego el producto undefined con el id: 1a6q65001n3wjj78lytlf608
+[2022-10-05T17:40:23.010] [INFO] default - Se actualizo el producto id: j16a6wy5vhi00m05iz560d97 con los datos [object Object]
+[2022-10-05T21:40:47.878] [INFO] default - Se elimino el producto id: j16a6wy5vhi00m05iz560d97
+[2022-10-05T21:41:36.425] [INFO] default - Se agrego el producto undefined con el id: 1cw6u6b5m0168z9au6aqu419
+[2022-10-05T21:42:11.274] [INFO] default - Se agrego el producto 1cw6u6b5m0168z9au6aqu419 al carrito l1r6650tl00yd49ugq7b25j5
+[2022-10-05T21:42:43.829] [INFO] default - Se agrego el producto 1a6q65001n3wjj78lytlf608 al carrito l1r6650tl00yd49ugq7b25j5
+[2022-10-05T21:42:45.020] [INFO] default - Se agrego el producto 1a6q65001n3wjj78lytlf608 al carrito l1r6650tl00yd49ugq7b25j5
+[2022-10-05T21:42:45.252] [INFO] default - Se agrego el producto 1a6q65001n3wjj78lytlf608 al carrito l1r6650tl00yd49ugq7b25j5
+[2022-10-05T21:42:45.815] [INFO] default - Se agrego el producto 1a6q65001n3wjj78lytlf608 al carrito l1r6650tl00yd49ugq7b25j5
+[2022-10-05T21:43:41.568] [INFO] default - Se agrego el producto 1a6q65001n3wjj78lytlf608 al carrito l1r6650tl00yd49ugq7b25j5
+[2022-10-05T21:43:42.625] [INFO] default - Se agrego el producto 1a6q65001n3wjj78lytlf608 al carrito l1r6650tl00yd49ugq7b25j5
+[2022-10-05T21:43:42.896] [INFO] default - Se agrego el producto 1a6q65001n3wjj78lytlf608 al carrito l1r6650tl00yd49ugq7b25j5
+[2022-10-05T21:45:12.787] [INFO] default - Se agrego el producto 1a6q65001n3wjj78lytlf608 al carrito u1ko66qft500y1327b4j8sb4
+[2022-10-05T21:45:13.727] [INFO] default - Se agrego el producto 1a6q65001n3wjj78lytlf608 al carrito u1ko66qft500y1327b4j8sb4
+[2022-10-05T21:45:14.516] [INFO] default - Se agrego el producto 1a6q65001n3wjj78lytlf608 al carrito u1ko66qft500y1327b4j8sb4
+[2022-10-05T21:46:07.267] [INFO] default - Se elimino el producto id: 1a6q65001n3wjj78lytlf608
