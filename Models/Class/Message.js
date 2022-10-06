@@ -3,13 +3,13 @@ import error_generator from "../../Tools/Error_Generator.js"
 export default class Message {
     #email
     #date
-    #texto
+    #text
   
-    constructor({email, texto}) {
+    constructor({email, text}) {
       this.id = id
       this.email = email
       this.#date = `${Getdate()}`
-      this.texto = texto
+      this.text = text
     }
   
     set email(email) {
@@ -18,16 +18,16 @@ export default class Message {
       this.#email = email
     }
   
-    set texto(texto) {
-      if (!texto) throw error_generator.MISSING_MESSAGE('Debe incluir un mensaje')
-      this.#texto = texto
+    set text(text) {
+      if (!text) throw error_generator.MISSING_MESSAGE('Debe incluir un mensaje')
+      this.#text = text
     }
   
     datos() {
       return Object.freeze(JSON.parse(JSON.stringify({
-        EMAIL: this.#email,
-        FECHA: this.#date,
-        TEXTO: this.#texto
+        email: this.#email,
+        date: this.#date,
+        text: this.#text
       })))
     }
   }

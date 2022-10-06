@@ -5,22 +5,9 @@ function postArchivoController(req, res) {
             mensaje: 'falta el archivo'
         })
     } else {
-        res.send(file)
+        res.status(202).json({msg: "File saved successfully",
+                            path: `Images/${file.filename}`})
     }
 }
 
-function postArchivosController(req, res) {
-    const files = req.files
-    if (!files || files.length === 0) {
-        res.status(400).json({
-            mensaje: 'faltan los archivos'
-        })
-    } else {
-        res.send(files)
-    }
-}
-
-module.exports = {
-    postArchivoController,
-    postArchivosController
-}
+export default postArchivoController

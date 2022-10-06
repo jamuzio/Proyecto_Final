@@ -128,3 +128,17 @@
 [2022-10-05T21:45:13.727] [INFO] default - Se agrego el producto 1a6q65001n3wjj78lytlf608 al carrito u1ko66qft500y1327b4j8sb4
 [2022-10-05T21:45:14.516] [INFO] default - Se agrego el producto 1a6q65001n3wjj78lytlf608 al carrito u1ko66qft500y1327b4j8sb4
 [2022-10-05T21:46:07.267] [INFO] default - Se elimino el producto id: 1a6q65001n3wjj78lytlf608
+[2022-10-06T13:46:09.278] [WARN] default - Ruta /api/images con el metodo POST no implementada!
+[2022-10-06T13:46:32.747] [WARN] default - Ruta /api/images con el metodo POST no implementada!
+[2022-10-06T15:03:16.315] [WARN] default - Ruta /Public//Images//a1m66ax50757c24g49xuizu1.jpeg con el metodo GET no implementada!
+[2022-10-06T15:03:16.462] [WARN] default - Ruta /favicon.ico con el metodo GET no implementada!
+[2022-10-06T15:03:28.997] [WARN] default - Ruta /Public/Images/a1m66ax50757c24g49xuizu1.jpeg con el metodo GET no implementada!
+[2022-10-06T15:03:48.806] [WARN] default - Ruta /localhost/Public/Images/a1m66ax50757c24g49xuizu1.jpeg con el metodo GET no implementada!
+[2022-10-06T15:04:16.231] [WARN] default - Ruta /Public/Images/a1m66ax50757c24g49xuizu1.jpeg con el metodo GET no implementada!
+[2022-10-06T15:05:47.105] [WARN] default - Ruta /Public/index.html con el metodo GET no implementada!
+[2022-10-06T15:06:16.657] [WARN] default - Ruta /static/Public/index.html con el metodo GET no implementada!
+[2022-10-06T15:08:37.942] [WARN] default - Ruta /Public/Images/a1m66ax50757c24g49xuizu1.jpeg con el metodo GET no implementada!
+[2022-10-06T15:08:49.295] [WARN] default - Ruta /Public/Images/a1m66ax50757c24g49xuizu1.jpeg con el metodo GET no implementada!
+[2022-10-06T15:09:31.585] [WARN] default - Ruta /Public/index.html con el metodo GET no implementada!
+[2022-10-06T15:13:33.120] [WARN] default - Ruta /Public/Images/a1m66ax50757c24g49xuizu1.jpeg con el metodo GET no implementada!
+[2022-10-06T15:13:35.764] [WARN] default - Ruta /Public/Images/a1m66ax50757c24g49xuizu1.jpeg con el metodo GET no implementada!

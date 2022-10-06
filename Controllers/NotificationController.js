@@ -1,11 +1,11 @@
-import twilio from 'twilio'
+//import twilio from 'twilio'
 import { createTransport } from 'nodemailer'
 import logger from '../Tools/logger.js'
 
 //const accountSid = process.env.accountSid
 //const authToken = process.env.authToken
 
-const client = twilio(process.env.accountSid, process.env.authToken)
+//const client = twilio(process.env.accountSid, process.env.authToken)
 
 const transporter = createTransport({
     service: 'gmail',
@@ -17,6 +17,7 @@ const transporter = createTransport({
 })
 
 const NotificationController = {
+    /*
     SendWhatsApp: async (MsgTxt, DesNum) =>{
         const mensaje = {
             body: MsgTxt, 
@@ -44,7 +45,7 @@ const NotificationController = {
         } catch (error) {
             throw error
         }
-    },
+    },*/
     
     SendMail: async (Msghtml, DesEmail, subject) =>{
         const mailOptions = {

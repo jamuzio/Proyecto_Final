@@ -1,3 +1,4 @@
+import generateID from '../Tools/ID_gen.js'
 import multer from 'multer'
 
 const storage = multer.diskStorage({
@@ -7,7 +8,8 @@ const storage = multer.diskStorage({
     filename: function (req, file, cb) {
         const typeArray = file.mimetype.split('/')
         const fileType = typeArray[1]
-        cb(null, `${req.session.passport.user}.${fileType}`)
+        const ID = generateID()
+        cb(null, `${ID}.${fileType}`)
     }
 })
 

@@ -11,7 +11,7 @@ const Server_Router = express()
 
 Server_Router.use('/api/products', routerProductos)
 Server_Router.use('/api/shoppingcartproducts', routerCarrito)
-Server_Router.use('/api/upload', archivosRouter)
+Server_Router.use('/api/images', archivosRouter)
 Server_Router.use('/', routerSession)
 Server_Router.all('*', (req, res) => {
     logger.warn(`Ruta ${req.url} con el metodo ${req.method} no implementada!`)

@@ -645,3 +645,27 @@
 [2022-10-05T17:36:52.398] [ERROR] default - DUPLICATED_PRODUCT: Producto Dupliacado
 [2022-10-05T17:43:35.062] [ERROR] default - MISSING_DATA: "id" es un campo requerido para crear el carrito
 [2022-10-05T21:42:20.577] [ERROR] default - NOT_FOUND: Recurso no encontrado
+[2022-10-06T13:47:06.863] [FATAL] default - ATENCION: A ocurrido un error sin manejo especifico. 
+	 MulterError: Unexpected field
+    at wrappedFileFilter (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\multer\index.js:40:19)
+    at Multipart.<anonymous> (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\multer\lib\make-middleware.js:107:7)
+    at Multipart.emit (node:events:390:28)
+    at HeaderParser.cb (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\busboy\lib\types\multipart.js:358:14)
+    at HeaderParser.push (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\busboy\lib\types\multipart.js:162:20)
+    at SBMH.ssCb [as _cb] (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\busboy\lib\types\multipart.js:394:37)
+    at feed (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\streamsearch\lib\sbmh.js:219:14)
+    at SBMH.push (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\streamsearch\lib\sbmh.js:104:16)
+    at Multipart._write (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\busboy\lib\types\multipart.js:567:19)
+    at writeOrBuffer (node:internal/streams/writable:389:12) 
+[2022-10-06T13:47:57.881] [FATAL] default - ATENCION: A ocurrido un error sin manejo especifico. 
+	 MulterError: Unexpected field
+    at wrappedFileFilter (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\multer\index.js:40:19)
+    at Multipart.<anonymous> (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\multer\lib\make-middleware.js:107:7)
+    at Multipart.emit (node:events:390:28)
+    at HeaderParser.cb (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\busboy\lib\types\multipart.js:358:14)
+    at HeaderParser.push (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\busboy\lib\types\multipart.js:162:20)
+    at SBMH.ssCb [as _cb] (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\busboy\lib\types\multipart.js:394:37)
+    at feed (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\streamsearch\lib\sbmh.js:219:14)
+    at SBMH.push (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\streamsearch\lib\sbmh.js:104:16)
+    at Multipart._write (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\busboy\lib\types\multipart.js:567:19)
+    at writeOrBuffer (node:internal/streams/writable:389:12) 
