@@ -1,11 +1,7 @@
 import { CarritoDao } from '../Models/DAOs/Carrito/index.js'
 import ShopCart from '../Models/Class/Carrito.js'
 import logger from '../Tools/logger.js'
-import NotificationController from '../Controllers/NotificationController.js'
 import Api_Prod from './API_Productos.js'
-import API_usuario from './API_Usuarios.js'
-import error_generator from '../Tools/Error_Generator.js'
-
 
 
 class CarritoAPI {
@@ -69,39 +65,6 @@ class CarritoAPI {
             throw error
         }
     }
-    async BuyChopCart(id){
-        try{
-            const user = await API_usuario.getUserByID(id)
-            const carrito = await this.carritos.getByID(id)
-            let texto = `Nuevo pedido de ${user.lastname}, ${user.name}: ${user.email}`
-            let HtmlMail = "<h1>Productos Solicitados:</h1><ul>"
-            //for (let producto of carrito.PRODUCTS){
-            //let datosDeProd = await Api_Prod.getProdById(producto.prodID)
-            //    datosDeProd.qty = producto.qty
-            //    ListaProductos.push(datosDeProd)
-            //}
-            for (let producto of carrito.prodList){
-                let ProductoBuscado = await Api_Prod.getProdById(producto.prodID)
-                if(ProductoBuscado === -1){
-                    throw error_generator.NOT_FOUND(`El producto con id ${producto.prodID} no se encuntra`)
-                }
-                HtmlMail+=`<li>${ProductoBuscado.name} 
-                            Cant: ${producto.qty} 
-                            Precio Unit: $${ProductoBuscado.value?.price}
-                            Precio Total: ${ProductoBuscado.value?.price * producto.qty}
-                            </li>`
-            }
-            HtmlMail+=`</ul>
-                        <p>Telefono de contacto: ${user.phone}</p>`
-            
-            await NotificationController.SendMail(HtmlMail,process.env.Notif_Email, texto)
-            await this.CleanByID(id)
-            res.status(200).json({Msg: "Pedido realizado con exito"})
-        }
-        catch(error){
-            throw error
-        }
-    }
 
     async removeDeleteProd(ID_Prod){
         try{
@@ -118,8 +81,6 @@ class CarritoAPI {
     }
 }
 
-
-const API_Carrito = new CarritoAPI
-
+const API_Carrito = new CarritoAPI()
 
 export default API_Carrito

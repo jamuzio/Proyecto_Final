@@ -58,10 +58,10 @@ class UsuariosAPI {
     async getUserByID(id){
         let usuarioBuscado = await this.usuarios.getById(id)
         const usuario = new User(usuarioBuscado) 
-        return usuario.datos()
+        return usuario.datosCompletos()
     }
 }
 
-const API_usuario = new UsuariosAPI
+const API_usuario = new UsuariosAPI()
 
 export default API_usuario

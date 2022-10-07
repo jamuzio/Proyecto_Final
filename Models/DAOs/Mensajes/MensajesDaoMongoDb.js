@@ -10,14 +10,33 @@ class MensajesDaoMongoDb extends Class_Mongo {
     async save(datos){
         try{
             const ID = generateID()
-            const mensaje = new Message({id:ID, email:datos.EMAIL, nombre:datos.NOMBRE, apellido:datos.APELLIDO, edad:datos.EDAD, avatar:datos.AVATAR, texto:datos.TEXTO})
+            const mensaje = new Message({id:ID, email:datos.email, texto:datos.texto})
             await super.save(mensaje.datos())
             return ID
         }
         catch(error){
             throw error
         }
-
+    }
+    async getAll(){
+        try{
+            const mensajes = await super.getAll()
+            let arrayToReturn = []
+            if(Array.isArray(mensajes)){
+                arrayToReturn = mensajes.map((msg) => {
+                    return{
+                        id: msg._id,
+                        email: msg.email,
+                        fecha: msg.fecha,
+                        texto: msg.texto
+                    }
+                })
+            }
+            return arrayToReturn
+        }
+        catch(error){
+            throw error
+        }
     }
     
 }

@@ -142,3 +142,37 @@
 [2022-10-06T15:09:31.585] [WARN] default - Ruta /Public/index.html con el metodo GET no implementada!
 [2022-10-06T15:13:33.120] [WARN] default - Ruta /Public/Images/a1m66ax50757c24g49xuizu1.jpeg con el metodo GET no implementada!
 [2022-10-06T15:13:35.764] [WARN] default - Ruta /Public/Images/a1m66ax50757c24g49xuizu1.jpeg con el metodo GET no implementada!
+[2022-10-07T15:21:07.941] [INFO] default - Se agrego el producto 1cw6u6b5m0168z9au6aqu419 al carrito u1ko66qft500y1327b4j8sb4
+[2022-10-07T15:21:10.455] [INFO] default - Se agrego el producto 1cw6u6b5m0168z9au6aqu419 al carrito u1ko66qft500y1327b4j8sb4
+[2022-10-07T15:21:10.994] [INFO] default - Se agrego el producto 1cw6u6b5m0168z9au6aqu419 al carrito u1ko66qft500y1327b4j8sb4
+[2022-10-07T15:21:11.482] [INFO] default - Se agrego el producto 1cw6u6b5m0168z9au6aqu419 al carrito u1ko66qft500y1327b4j8sb4
+[2022-10-07T15:21:13.696] [INFO] default - Se agrego el producto 1cw6u6b5m0168z9au6aqu419 al carrito u1ko66qft500y1327b4j8sb4
+[2022-10-07T15:21:25.970] [INFO] default - Se quitó el producto 1cw6u6b5m0168z9au6aqu419 al carrito u1ko66qft500y1327b4j8sb4
+[2022-10-07T15:21:34.929] [WARN] default - Ruta /api/orders con el metodo POST no implementada!
+[2022-10-07T15:44:14.198] [INFO] default - El carrito u1ko66qft500y1327b4j8sb4 se a vaciado con exito
+[2022-10-07T16:08:39.867] [INFO] default - Se agrego el producto 1cw6u6b5m0168z9au6aqu419 al carrito u1ko66qft500y1327b4j8sb4
+[2022-10-07T16:08:41.134] [INFO] default - Se agrego el producto 1cw6u6b5m0168z9au6aqu419 al carrito u1ko66qft500y1327b4j8sb4
+[2022-10-07T16:08:41.519] [INFO] default - Se agrego el producto 1cw6u6b5m0168z9au6aqu419 al carrito u1ko66qft500y1327b4j8sb4
+[2022-10-07T16:08:41.804] [INFO] default - Se agrego el producto 1cw6u6b5m0168z9au6aqu419 al carrito u1ko66qft500y1327b4j8sb4
+[2022-10-07T16:08:41.994] [INFO] default - Se agrego el producto 1cw6u6b5m0168z9au6aqu419 al carrito u1ko66qft500y1327b4j8sb4
+[2022-10-07T16:09:09.669] [INFO] default - El carrito u1ko66qft500y1327b4j8sb4 se a vaciado con exito
+[2022-10-07T19:08:11.179] [WARN] default - Ruta / con el metodo GET no implementada!
+[2022-10-07T19:25:03.245] [INFO] default - Nueva conexion iniciada
+[2022-10-07T19:25:06.341] [INFO] default - Nueva conexion iniciada
+[2022-10-07T19:25:47.437] [INFO] default - Nueva conexion iniciada
+[2022-10-07T19:25:48.632] [INFO] default - Nueva conexion iniciada
+[2022-10-07T19:25:54.295] [INFO] default - Nueva conexion iniciada
+[2022-10-07T19:28:37.092] [INFO] default - Nueva conexion iniciada
+[2022-10-07T19:29:16.188] [INFO] default - Nueva conexion iniciada
+[2022-10-07T19:31:55.782] [INFO] default - Nueva conexion iniciada
+[2022-10-07T19:32:26.048] [INFO] default - Nueva conexion iniciada
+[2022-10-07T19:34:58.329] [INFO] default - Nueva conexion iniciada
+[2022-10-07T19:36:14.920] [INFO] default - Nueva conexion iniciada
+[2022-10-07T19:37:02.087] [INFO] default - Nueva conexion iniciada
+[2022-10-07T19:37:08.759] [INFO] default - Nueva conexion iniciada
+[2022-10-07T19:38:08.772] [INFO] default - Nueva conexion iniciada
+[2022-10-07T19:38:54.272] [INFO] default - Nueva conexion iniciada
+[2022-10-07T19:39:15.352] [INFO] default - Nueva conexion iniciada
+[2022-10-07T19:42:22.829] [INFO] default - Nueva conexion iniciada
+[2022-10-07T19:43:39.977] [INFO] default - Nueva conexion iniciada
+[2022-10-07T19:45:38.507] [INFO] default - Nueva conexion iniciada

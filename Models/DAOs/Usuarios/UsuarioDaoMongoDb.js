@@ -51,7 +51,7 @@ class UsuarioDaoMongoDb extends Class_Mongo {
         const usuarioBuscado = await super.getOne('_id', id)
         return {
             id:usuarioBuscado._id, 
-            email: usuarioBuscado.emailL,
+            email: usuarioBuscado.email,
             password:usuarioBuscado.password,
             name: usuarioBuscado.name,
             lastname: usuarioBuscado.lastname,

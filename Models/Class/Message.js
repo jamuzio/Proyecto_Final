@@ -1,16 +1,22 @@
 import error_generator from "../../Tools/Error_Generator.js"
 
 export default class Message {
+    #id
     #email
-    #date
-    #text
+    #fecha
+    #texto
   
-    constructor({email, text}) {
+    constructor({id, email, texto}) {
       this.id = id
       this.email = email
-      this.#date = `${Getdate()}`
-      this.text = text
+      this.#fecha = `${Getdate()}`
+      this.texto = texto
     }
+
+    set id(id) {
+      if (!id) throw error_generator.MISSING_DATA('"id" es un campo requerido para crear el carrito')
+      this.#id = id
+  }
   
     set email(email) {
       if(!email) throw error_generator.MISSING_DATA('"Email" es un campo requerido')
@@ -18,16 +24,17 @@ export default class Message {
       this.#email = email
     }
   
-    set text(text) {
-      if (!text) throw error_generator.MISSING_MESSAGE('Debe incluir un mensaje')
-      this.#text = text
+    set texto(texto) {
+      if (!texto) throw error_generator.MISSING_MESSAGE('Debe incluir un mensaje')
+      this.#texto = texto
     }
   
     datos() {
       return Object.freeze(JSON.parse(JSON.stringify({
+        _id: this.#id,
         email: this.#email,
-        date: this.#date,
-        text: this.#text
+        fecha: this.#fecha,
+        texto: this.#texto
       })))
     }
   }

@@ -69,6 +69,7 @@ class ProductosApi {
      }
 }
 
-const Api_Prod = new ProductosApi
+const Api_Prod = new ProductosApi()
+
 
 export default Api_Prod

@@ -669,3 +669,49 @@
     at SBMH.push (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\streamsearch\lib\sbmh.js:104:16)
     at Multipart._write (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\busboy\lib\types\multipart.js:567:19)
     at writeOrBuffer (node:internal/streams/writable:389:12) 
+[2022-10-07T15:19:11.880] [ERROR] default - AUTHE_ERROR: Error de Autenticacion, credenciales no validas
+[2022-10-07T15:19:27.682] [ERROR] default - AUTHE_ERROR: Error de Autenticacion, credenciales no validas
+[2022-10-07T15:27:46.974] [ERROR] default - NOT_FOUND: Recurso no encontrado
+[2022-10-07T15:29:38.499] [ERROR] default - NOT_FOUND: Recurso no encontrado
+[2022-10-07T15:30:40.866] [ERROR] default - NOT_FOUND: Recurso no encontrado
+[2022-10-07T15:31:11.042] [ERROR] default - MISSING_DATA: "Email" es un campo requerido
+[2022-10-07T15:32:41.497] [ERROR] default - NOT_FOUND: Recurso no encontrado
+[2022-10-07T15:34:51.787] [ERROR] default - NOT_FOUND: Recurso no encontrado
+[2022-10-07T15:43:31.677] [FATAL] default - ATENCION: A ocurrido un error sin manejo especifico. 
+	 ReferenceError: generarHTML_Email is not defined
+    at OrdenAPI.BuyChopCart (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/APIs/API_Ordenes.js:37:30)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async BuyChopCart (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/Controllers/ControladorDeOrdenes.js:17:28) 
+[2022-10-07T15:45:19.695] [FATAL] default - ATENCION: A ocurrido un error sin manejo especifico. 
+	 ReferenceError: shopCarts is not defined
+    at OrdenesDaoMongoDb.getByClient (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/Models/DAOs/Ordenes/ordenesDaoMongo.js:26:30)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async OrdenAPI.getOrders (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/APIs/API_Ordenes.js:18:20)
+    at async getOrders (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/Controllers/ControladorDeOrdenes.js:8:29) 
+[2022-10-07T19:29:29.639] [ERROR] default - (SOCKET) MISSING_MESSAGE: Debe ingresar un mensaje
+[2022-10-07T19:37:14.366] [ERROR] default - (SOCKET) MISSING_MESSAGE: Debe ingresar un mensaje
+[2022-10-07T19:38:11.120] [ERROR] default - (SOCKET) MISSING_MESSAGE: Debe ingresar un mensaje
+[2022-10-07T19:39:19.747] [ERROR] default - ATENCION: A ocurrido un error desconocido en el socket. 
+	 TypeError: Cannot add property _id, object is not extensible
+    at D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\mongodb\lib\operations\common_functions.js:65:21
+    at Array.map (<anonymous>)
+    at prepareDocs (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\mongodb\lib\operations\common_functions.js:63:17)
+    at new InsertOneOperation (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\mongodb\lib\operations\insert.js:42:74)
+    at Collection.insertOne (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\mongodb\lib\collection.js:149:78)
+    at MensajesDaoMongoDb.save (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/Models/DB/Class_Mongo.js:11:41)
+    at MensajesDaoMongoDb.save (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/Models/DAOs/Mensajes/MensajesDaoMongoDb.js:14:25)
+    at eventoMensajeController (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/Controllers/socketController.js:14:24)
+    at Socket.<anonymous> (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/Controllers/socketController.js:8:37)
+    at Socket.emit (node:events:390:28) 
+[2022-10-07T19:42:26.354] [ERROR] default - ATENCION: A ocurrido un error desconocido en el socket. 
+	 TypeError: Cannot add property _id, object is not extensible
+    at D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\mongodb\lib\operations\common_functions.js:65:21
+    at Array.map (<anonymous>)
+    at prepareDocs (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\mongodb\lib\operations\common_functions.js:63:17)
+    at new InsertOneOperation (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\mongodb\lib\operations\insert.js:42:74)
+    at Collection.insertOne (D:\Ale\Documentos\Curso_BackEnd\Proyecto_Final\node_modules\mongodb\lib\collection.js:149:78)
+    at MensajesDaoMongoDb.save (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/Models/DB/Class_Mongo.js:11:41)
+    at MensajesDaoMongoDb.save (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/Models/DAOs/Mensajes/MensajesDaoMongoDb.js:16:25)
+    at eventoMensajeController (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/Controllers/socketController.js:14:24)
+    at Socket.<anonymous> (file:///D:/Ale/Documentos/Curso_BackEnd/Proyecto_Final/Controllers/socketController.js:8:37)
+    at Socket.emit (node:events:390:28) 

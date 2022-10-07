@@ -8,7 +8,6 @@ class Class_Mongo {
     }
     async save(NewElement){
         try{
-            console.log(NewElement)
             return await this.coleccion.insertOne(NewElement)
         }
         catch(error){

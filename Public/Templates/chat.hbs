@@ -1,0 +1,9 @@
+<ul style="list-style-type:none">
+    {{#each mensajes}}
+    <li>
+        <a style="color: blue; font-weight: bold">{{this.email}}:</a>
+        <a style= "color: brown">{{{this.fecha}}}:</a>
+        <a style="color: green; font-style: italic;">{{this.texto}}</a>
+    </li>
+    {{/each}}
+</ul>
