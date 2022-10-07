@@ -1,6 +1,6 @@
 import { Router } from 'express'
 import postArchivoController from '../Controllers/archivosControllers.js'
-import middlewareImageUpload from '../middleware/manejoDeArchivos.js'
+import middlewareImageUpload from '../Middleware/manejoDeArchivos.js'
 
 
 const archivosRouter = new Router()
