@@ -7,7 +7,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start:dev": "node .",
-    "start:prod": "NODE_ENV=production node ."
+    "start": "NODE_ENV=production node ."
   },
   "author": "",
   "license": "ISC",
